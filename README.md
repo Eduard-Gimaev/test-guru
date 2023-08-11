@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+Test-Guru application
 
 * Ruby version
+6.1.7.4
 
-* System dependencies
+* The list of entities
+1. User
+2. Auditor
+3. Question 
+4. Answer
+5. Test
+6. Result
 
-* Configuration
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
