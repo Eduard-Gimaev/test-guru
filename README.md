@@ -7,11 +7,10 @@ Test-Guru application
 
 * The list of entities
 1. User
-2. Auditor
-3. Question 
-4. Answer
-5. Test
-6. Result
+2. Question 3
+3. Answer
+4. Test
+5. Result
 
 
 

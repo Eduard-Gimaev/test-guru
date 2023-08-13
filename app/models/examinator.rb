@@ -1,2 +1,0 @@
-class Examinator < ApplicationRecord
-end
