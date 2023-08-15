@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2023_08_15_093950) do
 
   create_table "answers", force: :cascade do |t|
     t.string "body", null: false
-    t.string "correct"
+    t.string "correct", default: "t"
     t.integer "questions_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 2023_08_15_093950) do
 
   create_table "tests", force: :cascade do |t|
     t.string "title", null: false
-    t.integer "level"
+    t.integer "level", default: 1
     t.integer "categories_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
