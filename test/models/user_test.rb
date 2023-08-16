@@ -1,7 +1,7 @@
 require "test_helper"
 
 class UserTest < ActiveSupport::TestCase
-  def tests_by_level(level)
-    tests.where(level: level)
-  end
+  # test "the truth" do
+  #   assert true
+  # end
 end
