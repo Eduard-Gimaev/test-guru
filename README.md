@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Stack:
+* Ruby version: 3.2.2
+* Rails version: 6.1.7.4
 
-Things you may want to cover:
 
-* Ruby version
+# Definitions:
+Test – questions united by one topic and belonging to this test.
+Question – questions belonging to a specific test. Each question contains the correct answer id.
+Answer – answers belonging to a specific question.
+User – application users (regular and administrators).
 
-* System dependencies
+# Basic Fanctionality:
+ - Creating and managing tests
+ - CRUD tests/questions/answers
+ - Adding data to tests/questions/answers
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

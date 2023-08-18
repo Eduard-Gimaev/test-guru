@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    def self.test_by_category_desc(category)
-        by_category(category).order(title: :desc).pluck(:title)
-      end
+  def tests_by_level(level)
+    tests.where(level: level)
+  end
 end
