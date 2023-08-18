@@ -13,29 +13,29 @@ categories = Category.create!(
   
 tests = Test.create!(
   [
-    { title: "Ruby General", level: 3, category: categories[0] },
-    { title: "Rails Framework", level: 3, category: categories[0] },
-    { title: "HTML/CSS/SCSS", level: 1, category: categories[1] }
+    { title: "Ruby General", level: 3, category_id: categories[0].id },
+    { title: "Rails Framework", level: 3, category_id: categories[0].id },
+    { title: "HTML/CSS/SCSS", level: 1, category_id: categories[1].id }
   ]
 )
   
 questions = Question.create!(
   [
-    { body: "Is everything an object in Ruby?", test: tests[0] },
-    { body: "HTML is?", test: tests[2] },
-    { body: "CSS is?", test: tests[2] },
-    { body: "mobile first is?", test: tests[2] },
-    { body: "Rails is?", test: tests[1] }
+    { body: "Is everything an object in Ruby?", test_id: tests[0].id },
+    { body: "HTML is?", test_id: tests[2].id },
+    { body: "CSS is?", test_id: tests[2].id },
+    { body: "mobile first is?", test_id: tests[2].id },
+    { body: "Rails is?", test_id: tests[1].id }
   ]
 )
   
 answers = Answer.create!(
   [
-    { body: "Yes", question: questions[0], correct: true },
-    { body: "markup language", question: questions[1], correct: true },
-    { body: "style language", question: questions[2], correct: true },
-    { body: "mobile-optimized web design", question: questions[3], correct: true },
-    { body: "Fraimwork for rails for rails", question: questions[4], correct: true }
+    { body: "Yes", question_id: questions[0].id, correct: true },
+    { body: "markup language", question_id: questions[1].id, correct: true },
+    { body: "style language", question_id: questions[2].id, correct: true },
+    { body: "mobile-optimized web design", question_id: questions[3].id, correct: true },
+    { body: "Fraimwork for rails for rails", question_id: questions[4].id, correct: true }
   ]
 )
   
