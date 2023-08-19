@@ -1,6 +1,6 @@
 users = User.create!(
   [
-    { name: "TED"}
+    { user: "TED"}
   ]
 )
   
