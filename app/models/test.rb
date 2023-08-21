@@ -1,5 +1,9 @@
 class Test < ApplicationRecord
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 616b84df785af58bcc0915d3ea9e4bf1050addad
 =======
 
 >>>>>>> 616b84df785af58bcc0915d3ea9e4bf1050addad
@@ -9,6 +13,10 @@ class Test < ApplicationRecord
 
   end
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 616b84df785af58bcc0915d3ea9e4bf1050addad
 =======
 
 >>>>>>> 616b84df785af58bcc0915d3ea9e4bf1050addad
