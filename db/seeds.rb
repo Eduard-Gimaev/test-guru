@@ -1,6 +1,8 @@
 users = User.create!(
   [
-    { user: "TED"}
+    { user: "Ed" }, 
+    { user: "David" }, 
+    { user: "Adele" }
   ]
 )
   
@@ -15,7 +17,11 @@ tests = Test.create!(
   [
     { title: "Ruby General", level: 3, category_id: categories[0].id,user_id: users[0].id },
     { title: "Rails Framework", level: 3, category_id: categories[0].id,user_id: users[0].id },
-    { title: "HTML/CSS/SCSS", level: 1, category_id: categories[1].id,user_id: users[0].id }
+    { title: "HTML/CSS/SCSS", level: 1, category_id: categories[1].id,user_id: users[0].id },
+    { title: "Ruby General", level: 3, category_id: categories[0].id,user_id: users[1].id },
+    { title: "Rails Framework", level: 3, category_id: categories[0].id,user_id: users[1].id },
+    { title: "HTML/CSS/SCSS", level: 1, category_id: categories[1].id,user_id: users[2].id },
+
   ]
 )
   
