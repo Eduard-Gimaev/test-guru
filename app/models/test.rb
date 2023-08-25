@@ -1,7 +1,7 @@
 class Test < ApplicationRecord
 
   belongs_to :user
-  has_many :test_users, dependent: :destroy
+  has_many :test_users
   has_many :users, through: :test_users
 
   #has_and_belongs_to_many :users
