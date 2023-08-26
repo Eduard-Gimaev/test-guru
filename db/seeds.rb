@@ -15,9 +15,9 @@ categories = Category.create!(
   
 tests = Test.create!(
   [
-    { title: "Ruby General", level: 3, category_id: categories[0].id,user_id: users[0].id },
-    { title: "Rails Framework", level: 3, category_id: categories[0].id,user_id: users[0].id },
-    { title: "HTML/CSS/SCSS", level: 1, category_id: categories[1].id,user_id: users[0].id }
+    { title: "Ruby General", level: 3, category_id: categories[0].id },
+    { title: "Rails Framework", level: 3, category_id: categories[0].id },
+    { title: "HTML/CSS/SCSS", level: 1, category_id: categories[1].id }
   ]
 )
   
@@ -40,4 +40,6 @@ answers = Answer.create!(
     { body: "Fraimwork for rails for rails", question_id: questions[4].id, correct: true }
   ]
 )
+
+
   
