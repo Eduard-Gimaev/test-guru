@@ -5,6 +5,6 @@ class User < ApplicationRecord
   #has_and_belongs_to_many :tests
 
   def tests_by_level(level)
-    PassingTest.joins('JOIN users ON passing_tests.user_id = users.id').joins('JOIN tests ON passing_tests.test_id = tests.id').where('tests.level = ?', level).pluck(:user, :title, :level)
+    PassingTest.joins('JOIN tests ON tests.id = passing_tests.test_id').where(user_id: self.id).where('tests.level = ?', level).pluck(:user_id, :title )
   end
 end
