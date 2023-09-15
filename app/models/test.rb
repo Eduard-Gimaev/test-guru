@@ -5,13 +5,10 @@ class Test < ApplicationRecord
   has_many :tests_users
   has_many :users, through: :tests_users
 
-  #scope :by_category, ->(category) { joins(:category).where(category: { title: category }) }
+  scope :by_category, ->(category) { joins(:category).where(category: { title: category }) }
 
   def self.category_tests_titles_desc(category)
-    #by_category(category).order(title: :desc).pluck(:title)
-    Test.joins(:category).where(category: { title: category }).order(title: :desc).pluck(:title)
-    
-    #Test.joins('JOIN categories ON tests.category_id = categories.id').where('categories.title = ?', category).order(title: :desc)
+    by_category(category).order(title: :desc).pluck(:title)
   end
 end
 
