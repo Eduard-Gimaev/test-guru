@@ -5,6 +5,6 @@ class Test < ApplicationRecord
   has_many :tests_users
   has_many :users, through: :tests_users
 
-  scope :by_category, -> (category) {joins(:category).where('categories.title = ?', category).order(title: :desc).pluck(:title) }
+  scope :by_category, -> (category_title) {joins(:category).where('categories.title = ?', category_title).order(title: :desc).pluck(:title) }
 end
 
