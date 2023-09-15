@@ -5,6 +5,15 @@ class Test < ApplicationRecord
   has_many :tests_users
   has_many :users, through: :tests_users
 
-  scope :by_category, -> (category_title) {joins(:category).where('categories.title = ?', category_title).order(title: :desc).pluck(:title) }
+  scope :by_category, -> (category_title) {joins(:category).where('categories.title = ?', category_title)}
+
+  scope :easy, -> { where(level: 0..1) }
+  scope :medium, -> { where(level: 2..4) }
+  scope :difficult, -> { where(level: 5..Float::INFINITY) }
+
+
+  def self.category_tests_titles_desc(category)
+    by_category(category).order(title: :desc).pluck(:title)
+  end
 end
 
