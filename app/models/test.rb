@@ -9,7 +9,7 @@ class Test < ApplicationRecord
   #validates :validate_level_max
   validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
-  scope :by_category, -> (category_title) {joins(:category).where('categories.title = ?', category_title)}
+  scope :by_category, -> (category_title) {joins(:category).where(categories: { title: category_title })
   scope :easy, -> { where(level: 0..1) }
   scope :medium, -> { where(level: 2..4) }
   scope :difficult, -> { where(level: 5..Float::INFINITY) }
