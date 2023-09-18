@@ -5,7 +5,8 @@ class Test < ApplicationRecord
   has_many :tests_users
   has_many :users, through: :tests_users
 
-  validates :title, presence: true
+  validates :title, presence
+  validates :title, uniqueness: { scope: :level }
   #validates :validate_level_max
   validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
