@@ -20,6 +20,8 @@ class Test < ApplicationRecord
     by_category(category).order(title: :desc).pluck(:title)
   end
 
+  #private
+  
   #def validate_level_max
     #errors.add(:level) unless level.to_i >= 0
   #end
