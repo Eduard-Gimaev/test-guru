@@ -5,13 +5,25 @@ class Test < ApplicationRecord
   has_many :tests_users
   has_many :users, through: :tests_users
 
-  #scope :by_category, ->(category) { joins(:category).where(category: { title: category }) }
+  validates :title, presence
+  validates :title, uniqueness: { scope: :level }
+  #validates :validate_level_max
+  validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+
+  scope :by_category, -> (category_title) {joins(:category).where(categories: { title: category_title })
+  scope :easy, -> { where(level: 0..1) }
+  scope :medium, -> { where(level: 2..4) }
+  scope :difficult, -> { where(level: 5..Float::INFINITY) }
+
 
   def self.category_tests_titles_desc(category)
-    #by_category(category).order(title: :desc).pluck(:title)
-    Test.joins(:category).where(category: { title: category }).order(title: :desc).pluck(:title)
-    
-    #Test.joins('JOIN categories ON tests.category_id = categories.id').where('categories.title = ?', category).order(title: :desc)
+    by_category(category).order(title: :desc).pluck(:title)
   end
+
+  #private
+  
+  #def validate_level_max
+    #errors.add(:level) unless level.to_i >= 0
+  #end
 end
 
