@@ -12,12 +12,12 @@ class TestsController < ApplicationController
 
   def create 
     @test = Test.create(test_params)
-      render plain: test.inspect
+    render plain: @test.inspect
   end
 
   private
   def test_params
-    params.require(:test).permit(:title, :level)
+    params.require(:test).permit(:title, :level, :category_id, :author_id)
   end
 
 end

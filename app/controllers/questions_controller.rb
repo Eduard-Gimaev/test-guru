@@ -3,12 +3,9 @@ class QuestionsController < ApplicationController
   before_action :find_question, only: %i[show destroy]
   
   def index
-    render html: '<h2>All questions</h2>'.html_safe
-    @questions = @test.questions # does not work
   end
   
   def show
-    render html: '<h2>Question found</h2>'.html_safe
   end
 
   def new
@@ -37,7 +34,7 @@ class QuestionsController < ApplicationController
   end
 
   def question_params
-    params.require(:question).permit(:body)
+    params.require(:question).permit(:body, :test_id)
   end
   
   def rescue_question_not_found
