@@ -1,6 +1,6 @@
-require_relative "boot"
+require_relative 'boot'
 
-require "rails/all"
+require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -17,7 +17,7 @@ module TestGuru
     # in config/environments, which are processed later.
     #
     config.active_record.default_timezone = :local
-    config.i18n.available_locales = [:en, :ru]
+    config.i18n.available_locales = %i[en ru]
     config.i18n.default_locale = :ru
     # config.eager_load_paths << Rails.root.join("extras")
   end
