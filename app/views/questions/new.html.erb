@@ -1,14 +1,14 @@
 <h1>Create New Question</h1>
-<form action="questions/" method="post">
+<form action="/tests/<%=params[:test_id]%>/questions" method="post">
 <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
 
 <label for="test-test_id">test_id:</label>
-<input type="text" name="test[test_id]" id="test-test_id"> 
+<input type="integer" name="test[test_id]" id="test-test_id"> 
 </p><br>
 <p>
-<label for="question-body">Body:</label>
+<label for="question-body">body:</label>
 <br>
-<textarea class="form-control" name="testquestion[body]" id="question-body" rows="3"></textarea>
+<textarea class="form-control" name="question[body]" id="question-body" rows="3"></textarea>
 </p><br>
 <p>
 

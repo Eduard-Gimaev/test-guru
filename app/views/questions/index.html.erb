@@ -5,7 +5,9 @@
   <%= @test.title %>
 </p>
 
-<p>
   <strong><%= t('.test_questions:') %></strong>
+  <br/>
   <%= @test.questions %>
+
+  <%# <%= render json:{ Questions: Question.all}%>
 </p>

@@ -13,7 +13,7 @@ class QuestionsController < ApplicationController
   
   def create
     @question = @test.questions.create(question_params)
-    render plain: question.inspect
+    render plain: @question.inspect
   end
 
   def destroy
