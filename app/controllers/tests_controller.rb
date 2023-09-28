@@ -10,9 +10,13 @@ class TestsController < ApplicationController
   def new
   end
 
-  def create 
+  def create
     @test = Test.create(test_params)
-    render plain: @test.inspect
+    if @test.save
+      render plain: @test.inspect
+    else
+      render plain: 'Test has not been created'
+    end
   end
 
   private
