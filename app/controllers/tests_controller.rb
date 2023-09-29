@@ -1,7 +1,9 @@
 class TestsController < ApplicationController
+  before_action :find_test, only: %i[index]
+
   def index
-    #result = ["Class: #{params.class}", "Paramentrs: #{params.inspect}"]
-    #render plain: result.join("\n")
+    # result = ["Class: #{params.class}", "Paramentrs: #{params.inspect}"]
+    # render plain: result.join("\n")
   end
 
   def show
@@ -23,5 +25,11 @@ class TestsController < ApplicationController
   def test_params
     params.require(:test).permit(:title, :level, :category_id, :author_id)
   end
+
+  def find_test
+    @tests = Test.all
+  end
+
+
 
 end

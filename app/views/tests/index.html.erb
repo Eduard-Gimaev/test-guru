@@ -1,10 +1,14 @@
 <h2><%= t('.tests:') %></h2>
 
-<table class="table table-striped mt-3">
-  <tr>
-    <th><%= t('.category') %></th>
-    <th><%= t('.title') %></th>
-    <th><%= t('.level') %></th>
-  </tr>
-  <%= render @tests %>
+<p>
+  <strong><%= t('.number_of_tests:') %></strong>
+  <%= @tests.count%>
+  </br>
+<strong><%= t('.tests_title:') %></strong>
+</br>
+<% @tests.each do |i|%>
+<%= i.title%>
+</br>
+<% end%>
+</p>
 </table>
