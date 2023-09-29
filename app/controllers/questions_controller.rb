@@ -15,7 +15,7 @@ class QuestionsController < ApplicationController
   end
   
   def create
-    @question = @test.questions.create(question_params)
+    @question = @test.questions.new(question_params)
     if @question.save
       redirect_to @question
     else
@@ -39,7 +39,7 @@ class QuestionsController < ApplicationController
   end
 
   def question_params
-    params.require(:question).permit(:bodys)
+    params.require(:question).permit(:body)
   end
   
   def rescue_question_not_found
