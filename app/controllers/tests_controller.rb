@@ -1,35 +1,42 @@
 class TestsController < ApplicationController
-  before_action :find_test, only: %i[index]
 
   def index
-    # result = ["Class: #{params.class}", "Paramentrs: #{params.inspect}"]
-    # render plain: result.join("\n")
+    @tests = Test.all
   end
 
   def show
+    @test = Test.find(params[:id])
   end
 
   def new
   end
 
   def create
-    @test = Test.new(test_params)
+    @test = Test.new(params[:test])
     if @test.save
-      render plain: @test.inspect
+      redirect_to @test
     else
-      render plain: 'Test has not been created'
+      render :new 
     end
   end
+
+  def edit 
+    @test = Test.find(params[:id])
+  end
+  
+  def update
+    @test = Test.find(params[:id])
+  
+    if @test.updete(test_params)
+      redirect_to @test
+    else
+      render :edit 
+    end
+  end
+  
 
   private
   def test_params
     params.require(:test).permit(:title, :level, :category_id, :author_id)
   end
-
-  def find_test
-    @tests = Test.all
-  end
-
-
-
 end
