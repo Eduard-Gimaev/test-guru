@@ -1,5 +1,7 @@
 <%= form_with model: @test, local: true do |f| %>
 
+ <%# <%= render 'shared/errors', resource: @test%> 
+
   <p>
     <%= f.label :title, class: "form-label" %>        
     <%= f.text_field :title, class: 'form-control form-control-sm', required: true %>
