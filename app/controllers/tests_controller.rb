@@ -1,11 +1,12 @@
 class TestsController < ApplicationController
 
+  before_action :find_tests, only: %i[index update]
+  before_action :find_test, only: %i[show edit update]
+
   def index
-    @tests = Test.all
   end
 
   def show
-    @test = Test.find(params[:id])
   end
 
   def new
@@ -21,13 +22,10 @@ class TestsController < ApplicationController
   end
 
   def edit 
-    @test = Test.find(params[:id])
   end
   
   def update
-    @test = Test.find(params[:id])
-  
-    if @test.updete(test_params)
+    if @test.update(test_params)
       redirect_to @test
     else
       render :edit 
@@ -36,6 +34,14 @@ class TestsController < ApplicationController
   
 
   private
+  def find_tests
+    @tests = Test.all
+  end
+
+  def find_test
+    @test = Test.find(params[:id])
+  end
+
   def test_params
     params.require(:test).permit(:title, :level, :category_id, :author_id)
   end
