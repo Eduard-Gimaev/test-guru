@@ -20,7 +20,7 @@ class QuestionsController < ApplicationController
     if @question.save
       redirect_to @question
     else
-      render plain: @question.inspect
+      render :new
     end
   end
 

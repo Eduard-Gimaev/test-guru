@@ -18,7 +18,7 @@ class TestsController < ApplicationController
     if @test.save
       redirect_to @test
     else
-      render plain: @test.inspect
+      render :new
     end
   end
 

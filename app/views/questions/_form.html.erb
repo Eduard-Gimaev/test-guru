@@ -1,7 +1,11 @@
 <%= form_with model: [@test, @question] do |form| %>
-<%# <%= render 'shared/errors', resource: @question %>
+<%= render 'shared/errors', resourse: @question%> 
+<p>
+  <strong><%= t('.question_for_test:') %></strong>
+  <%= form.label :test %>: <%= @question.test.title %>
+</p>
  <p>
-    <%= form.label :body %><br>
+    <%= form.label :question_text %>:<br>
     <%= form.text_field :body %>
   </p>
   <p>
