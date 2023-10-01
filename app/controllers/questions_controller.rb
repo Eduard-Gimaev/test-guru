@@ -12,6 +12,7 @@ class QuestionsController < ApplicationController
   end
 
   def new
+    # @question = @test.questions.new
   end
   
   def create
@@ -20,6 +21,14 @@ class QuestionsController < ApplicationController
       redirect_to @question
     else
       render plain: @question.inspect
+    end
+  end
+
+  def update
+    if @question.update(question_params)
+      redirect_to @question
+    else
+      render :edit
     end
   end
 

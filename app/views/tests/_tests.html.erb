@@ -1,6 +1,18 @@
-<% @tests.each do |test| %>
-<tr>
-  <td><%= test.title %></td>
-  <td><%= test.level %></td>
-</tr>
+<% if @tests.present? %>
+  <h2>Tests:</h2>
+  <table>
+  <tr>
+  <th>Title</th>
+  <th>Level</th>
+  <th>Questions</th>
+  <% @tests.each do |test| %>
+  </tr>
+  <tr>
+  <td> <%= test.title %> </td>
+  <td> <%= test.level %> </td>
+  <td> <%= test.questions.count %> </td>
+  </tr>
+  <% end %>
+<% else %>
+  <p>You do not have tests at this moment.</p>
 <% end %>

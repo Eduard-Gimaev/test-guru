@@ -1,10 +1,7 @@
-<h2><%= t('.test_show') %></h2>
-<p>
-  <strong>Title:</strong>
-  <%= @test.title %>
-</p>
+  <h2><%= t('.test_show') %></h2>
+  <p><strong>title:</strong> <%= @test.title %></p>
+  <p><strong>level:</strong>  <%= @test.level %></p>
+  <p><strong>questions:</strong> <%= @test.questions.count %></p>
+  <p><%= link_to t('actions.back'), :back, class: "btn btn-secondary" %></p>
 
-<p>
-  <strong>Level:</strong>
-  <%= @test.level %>
-</p>
+  

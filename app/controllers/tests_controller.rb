@@ -1,6 +1,6 @@
 class TestsController < ApplicationController
 
-  before_action :find_tests, only: %i[index update]
+  before_action :find_tests, only: %i[index]
   before_action :find_test, only: %i[show edit update]
 
   def index
@@ -10,14 +10,15 @@ class TestsController < ApplicationController
   end
 
   def new
+    @test = Test.new
   end
 
   def create
-    @test = Test.new(params[:test])
+    @test = Test.new(test_params)
     if @test.save
       redirect_to @test
     else
-      render :new 
+      render plain: @test.inspect
     end
   end
 

@@ -1,12 +1,2 @@
 <h1>Create New Question</h1>
-<form action="/tests/<%=params[:test_id]%>/questions" method="post">
-<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-
-<p>
-<label for="question-body">Body:</label>
-<br>
-<textarea class="form-control" name="question[body]" id="question-body" rows="3"></textarea>
-</p>
-
-<input type="submit" value="Create">
-</form>
+<%= render 'form' %>
