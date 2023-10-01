@@ -1,12 +1,12 @@
 <%= form_with model: @test, local: true do |form| %>
  <%= render 'shared/errors', resourse: @test%> 
   <p>
-    <%= form.label :title, class: "form-label" %>        
+    <%= form.label :title, class: "form-label"  %>        
     <%= form.text_field :title, class: 'form-control form-control-sm', required: true %>
   </p>
   <p>
-    <%= form.label :level, class: "form-label" %>        
-    <%= form.number_field :level, class: 'form-control form-control-sm', required: true %>
+    <%= form.label :level, class: "form-label", id: :test_title %>        
+    <%= form.number_field :level, class: 'form-control form-control-sm', required: true%>
   </p>
   <p>
     <%= form.label :category_id, class: "form-label" %>        
