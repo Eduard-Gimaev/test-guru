@@ -1,7 +1,7 @@
 class TestsController < ApplicationController
 
-  before_action :find_tests, only: %i[index]
-  before_action :find_test, only: %i[show edit update]
+  before_action :find_tests, only: %i[index destroy]
+  before_action :find_test, only: %i[show edit update destroy]
 
   def index
   end
@@ -27,11 +27,17 @@ class TestsController < ApplicationController
   
   def update
     if @test.update(test_params)
-      redirect_to @test
+      redirect_to tests_path
     else
       render :edit 
     end
   end
+
+  def destroy
+    @test.destroy
+    redirect_to @tests
+  end
+
   
 
   private
