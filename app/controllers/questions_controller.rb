@@ -3,9 +3,6 @@ class QuestionsController < ApplicationController
   before_action :find_question, only: %i[show edit update destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_question_not_found
-
-  def index
-  end
   
   def show
   end
@@ -33,7 +30,6 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-    # render @test.questions
     redirect_to test_path(@question.test)
   end
 
