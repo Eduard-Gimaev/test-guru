@@ -1,5 +1,5 @@
 <%= form_with(model: [@test, @question], local: true) do |form| %>
-<%= render 'shared/errors', resourse: @question%> 
+<%= render 'shared/errors', resourсe: @question%> 
 <p>
   <strong><%= t('.question_for_test:') %></strong>
   <%= form.label :test %>: <%= @question.test.title %>

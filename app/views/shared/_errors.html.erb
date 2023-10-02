@@ -1,8 +1,8 @@
- <% if resourse.errors.present? %>
+ <% if resourсe.errors.present? %>
     <div>
-      <h2><%= pluralize(resourse.errors.count, 'error') %> detected:</h2>
+      <h2><%= pluralize(resourсe.errors.count, 'error') %> detected:</h2>
       <ul>
-        <% resourse.errors.full_messages.each do |message| %>
+        <% resourсe.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>
