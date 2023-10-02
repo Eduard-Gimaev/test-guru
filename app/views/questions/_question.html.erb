@@ -1,0 +1,18 @@
+<table>
+<tr>
+  <td><%= question.body %></td>
+</tr>
+<tr>
+<td>
+    <%= link_to t('actions.show'), question_path(question) %> |
+    <%= link_to t('actions.edit'), edit_question_path(question) %> |
+    <%= link_to t('actions.destroy'), question_path(question),
+                method: :delete,
+                data: { confirm: t('actions.confirm') },
+                class: "btn btn-outline-danger btn-sm" %>
+  </td>      
+</tr>
+</table>
+
+
+
