@@ -1,14 +1,4 @@
-<h2><%= t('.tests:') %></h2>
+<h2>ALL TESTS:</h2>
+<%= render @tests%>
 
-<p>
-  <strong><%= t('.number_of_tests:') %></strong>
-  <%= @tests.count%>
-  </br>
-<strong><%= t('.tests_title:') %></strong>
-</br>
-<% @tests.each do |i|%>
-<%= i.title%>
-</br>
-<% end%>
-</p>
-</table>
+<p><%= link_to 'New test', new_test_path %></p>

@@ -1,0 +1,17 @@
+<table>
+<tr>
+  <td><%= question.body%></td>
+</tr>
+<tr>
+<td>
+    <%= link_to t('actions.show'), question_path(question) %> |
+    <%= link_to t('actions.edit'), edit_question_path(question) %> |
+    <%= link_to t('actions.delete'), question_path(question), 
+        method: :delete, 
+        data: { confirm: 'Are you sure?' } %>
+  </td>      
+</tr>
+</table>
+
+
+

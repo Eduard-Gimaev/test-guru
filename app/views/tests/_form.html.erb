@@ -1,0 +1,26 @@
+<%= form_with model: @test, local: true do |form| %>
+ <%= render 'shared/errors', resourсe: @test%> 
+  <p>
+    <%= form.label :title, class: "form-label"  %>        
+    <%= form.text_field :title, class: 'form-control form-control-sm', required: true %>
+  </p>
+  <p>
+    <%= form.label :level, class: "form-label", id: :test_title %>        
+    <%= form.number_field :level, class: 'form-control form-control-sm', required: true%>
+  </p>
+  <p>
+    <%= form.label :category_id, class: "form-label" %>        
+    <%= form.collection_select :category_id, Category.all, :id, :title, 
+    { prompt: true }, class:"form-select form-select-sm", required: true %>
+  </p>
+  <p>
+    <%= form.label :author_id, class: "form-label" %>        
+    <%= form.collection_select :author_id, User.all, :id, :user, 
+    { prompt: true }, class:"form-select form-select-sm", required: true %>
+  </p>
+  <p>
+    <%= form.submit class:"btn btn-primary"%>
+    <%= link_to t('.back'), tests_path %>
+  </p>
+<% end %>
+

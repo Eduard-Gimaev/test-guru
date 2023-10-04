@@ -1,0 +1,17 @@
+
+<table>
+<tr>
+    <td> <strong>title:</strong> <%= test.title %></td>
+    <td> <strong>level:</strong> <%= test.level %> </td> 
+    <td> <strong>questions:</strong> <%= test.questions.count %> |  </td>
+    <td> <%= link_to t('actions.edit'), edit_test_path(test)%> | </td>
+    <td> <%= link_to t('actions.show'), test_path(test)%> | </td>
+    <td>
+    <%= link_to t('.delete'), test_path(test), 
+        method: :delete, 
+        data: { confirm: 'Are you sure?' } %>
+    </td>
+</tr>
+</table>
+
+  

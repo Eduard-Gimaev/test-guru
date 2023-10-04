@@ -1,1 +1,6 @@
-<h2><%= t('.test_show') %></h2>
+<h2>Details of the test: <%= @test.title %></h2>
+<%=  render @test.questions %> 
+</br>
+<%= link_to t('.all_tests'), tests_path %> |
+<%= link_to 'New question', new_test_question_path(@test) %>
+
