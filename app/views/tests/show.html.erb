@@ -1,6 +1,13 @@
-<h2><%= @test.title %> / Details:</h2>
-<%=  render @test.questions %> 
+
+<h2><%= @test.title %> test details:</h2>
+<table border = "1">
+  <tr>
+    <th>Question</th>
+    <th colspan="4">Actions</th>
+  </tr>
+    <%= render @test.questions %>
+</table>
 </br>
 <%= link_to t('.all_tests'), tests_path %> |
-<%= link_to 'New question', new_test_question_path(@test) %>
+<%= link_to 'New question', new_test_question_path(@test) %> |
 

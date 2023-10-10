@@ -1,15 +1,18 @@
 class AnswersController < ApplicationController
   before_action :find_question, only: %i[new create]
+  before_action :find_answer, only: %i[show edit update destroy]
 
+  def show
+  end
 
   def new
-    @answer = @question.answer.new
+    @answer = @question.answers.new
   end
 
   def create
     @answer = Answer.new(answer_params)
     if @answer.save
-      redirect_to @answer, notice: 'Answer was successfully updated.'
+      redirect_to @answer
     else
       render :new
     end
@@ -34,8 +37,12 @@ class AnswersController < ApplicationController
     @question = Question.find(params[:question_id])
   end
 
+  def find_answer
+    @answer = Answer.find(params[:id])
+  end
+
   def answer_params
-    params.require(:answer).permit(:body, :correct)
+    params.require(:answer).permit(:body, :correct, :question_id)
   end
 
 
