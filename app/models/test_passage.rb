@@ -17,6 +17,10 @@ class TestPassage < ApplicationRecord
     (correct_questions.to_f / test.questions.count.to_f) * 100
   end
 
+  def current_question_number
+    test.questions.index(current_question) + 1
+  end
+
   def success?
     correct_answers_count >= SUCCESS_RATIO
   end
@@ -38,9 +42,7 @@ class TestPassage < ApplicationRecord
   def correct_answer?(answer_ids)
     correct_answers.ids.sort == answer_ids.map(&:to_i).sort
   end
-  
 
-  
   def next_question
     if current_question.nil? && test.present?
       test.questions.order(:id).first
