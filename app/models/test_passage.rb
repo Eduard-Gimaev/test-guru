@@ -30,16 +30,18 @@ class TestPassage < ApplicationRecord
   def before_validation_set_current_question
     self.current_question = next_question
   end
-  
 
+  def correct_answers
+    current_question.answers.correct
+  end
 
   def correct_answer?(answer_ids)
-    if answer_ids.present?
-      @test_passage.correct_answers.ids.sort == params[:answer_ids].to_a.map(&:to_i).sort 
-    else
-      nil
-    end
+    correct_answers_count = correct_answers.count
+    (correct_answers_count == correct_answers.where(id: answer_ids).count) &&
+    correct_answers_count == answer_ids.count
   end
+  
+
   
   def next_question
     if current_question.nil? && test.present?
