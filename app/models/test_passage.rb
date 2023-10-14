@@ -6,7 +6,7 @@ class TestPassage < ApplicationRecord
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
 
-  before_validation :before_validation_set_current_question, on: %i[create update]
+  before_validation :before_validation_find_current_question, on: %i[create update]
 
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
@@ -31,7 +31,7 @@ class TestPassage < ApplicationRecord
 
   private
 
-  def before_validation_set_current_question
+  def before_validation_find_current_question
     self.current_question = next_question
   end
 
