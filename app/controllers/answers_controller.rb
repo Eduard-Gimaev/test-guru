@@ -18,6 +18,9 @@ class AnswersController < ApplicationController
     end
   end
 
+  def edit
+  end
+
   def update
     if @answer.update(answer_params)
       redirect_to @answer
@@ -44,6 +47,4 @@ class AnswersController < ApplicationController
   def answer_params
     params.require(:answer).permit(:body, :correct)
   end
-
-
 end
