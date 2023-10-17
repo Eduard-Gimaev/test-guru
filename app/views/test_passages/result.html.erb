@@ -1,0 +1,9 @@
+<h1>The passing test: <%= @test_passage.test.title %> is completed!</h1>
+<% if @test_passage.success? %>
+  <p>Your score <span class="color_green">= <%= @test_passage.correct_answers_count %>% =</span> Test passed.</p>
+<% else %>
+  <p>Your score <span class="color_red">= <%= @test_passage.correct_answers_count %>% =</span> Try again.</p>
+<% end %>
+
+<%= link_to 'Back to tests', tests_path %>
+

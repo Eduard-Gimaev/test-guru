@@ -34,20 +34,14 @@ questions = Question.create!(
 answers = Answer.create!(
   [
     { body: 'Yes', question_id: questions[0].id, correct: true },
-    { body: 'markup language', question_id: questions[1].id, correct: true },
+    { body: 'No', question_id: questions[0].id },
+    { body: 'Markup language', question_id: questions[1].id, correct: true },
+    { body: 'Progamming language', question_id: questions[1].id },
     { body: 'style language', question_id: questions[2].id, correct: true },
+    { body: 'Programming language', question_id: questions[2].id },
     { body: 'mobile-optimized web design', question_id: questions[3].id, correct: true },
-    { body: 'Fraimwork for rails for rails', question_id: questions[4].id, correct: true }
-  ]
-)
-
-tests_users = TestsUser.create!(
-  [
-    { user_id: users[0].id, test_id: tests[0].id },
-    { user_id: users[1].id, test_id: tests[1].id },
-    { user_id: users[2].id, test_id: tests[2].id },
-    { user_id: users[2].id, test_id: tests[1].id },
-    { user_id: users[2].id, test_id: tests[0].id }
-
+    { body: 'something to do with phones', question_id: questions[3].id },
+    { body: 'Fraimwork for rails for rails', question_id: questions[4].id, correct: true },
+    { body: 'Progamming language', question_id: questions[4].id }
   ]
 )
