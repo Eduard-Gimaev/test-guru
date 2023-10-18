@@ -1,4 +1,4 @@
- <% if resourсe.errors.present? %>
+ <% if resource.present? && resource.errors.any? %>
     <div>
       <h2><%= pluralize(resourсe.errors.count, 'error') %> detected:</h2>
       <ul>
@@ -8,3 +8,5 @@
       </ul>
     </div>
   <% end %>
+
+  
