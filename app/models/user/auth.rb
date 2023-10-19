@@ -1,11 +1,12 @@
 module User::Auth
+
     extend ActiveSupport::Concern
 
     attr_reader :password
     attr_writer :password_confirmation
 
     included do
-      validates :email, presence: trule
+      validates :email, presence: true
       validates :password, presence: true, if: Proc.new { |u| u.password_digest.blank? }
       validates :password, confirmation: true
     end
