@@ -13,6 +13,9 @@
   <body>
     <% if logged_in? %>
       <p class="nav user">Welcome, <b><%= current_user.user %>(<%= current_user.user %>)</b></p>
+      <p class="nav signout"> <%= link_to 'Sign out', session_path(session),
+                method: :delete,
+                data: { confirm: 'Are you sure to sign out?' }  %> </p>
     <% end %>
 
     <%= yield %>
