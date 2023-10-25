@@ -2,7 +2,7 @@
 <% if @test_passage.success? %>
   <p>Dear <%=current_user.user%>, your score <span class="color_green">= <%= @test_passage.correct_answers_count %>% =</span> Test passed.</p>
 <% else %>
-  <p>Dear <%=current_user.user%>! your score <span class="color_red">= <%= @test_passage.correct_answers_count %>% =</span> Try again.</p>
+  <p>Dear <%=current_user.user%>, your score <span class="color_red">= <%= @test_passage.correct_answers_count %>% =</span> Try again.</p>
 <% end %>
 
 <%= link_to 'Back to tests', tests_path %>
