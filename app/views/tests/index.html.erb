@@ -1,10 +1,17 @@
 <table border = "1">
 <caption>TESTS:</caption>
   <tr>
+  <th colspan="5"><%= link_to 'New test', new_test_path %></th>
+  </tr>
+  <tr>
   <th>Title</th>
   <th colspan="4">Actions</th>
   </tr>
 <%= render @tests%>
 </table>
-
-<p><%= link_to 'New test', new_test_path %></p>
+<% unless logged_in? %>
+  <p>
+  | <%= link_to 'Log in', login_path %> |
+  <%= link_to 'Sign up', signup_path %> |
+  </p>
+<% end %>
