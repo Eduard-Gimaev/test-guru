@@ -3,8 +3,10 @@ module ApplicationHelper
     " - #{Time.now.year.to_i} - "
   end
 
-  def flash_message(type)
-    content_tag :p, flash[type], class: "flash #{type}"
+  def flash_message
+    flash.map do |type, msg|
+      content_tag :p, flash[type], class: "flash #{type}"
+    end.join().html_safe
   end
 
 end
