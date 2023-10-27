@@ -4,8 +4,8 @@ module ApplicationHelper
   end
 
   def flash_message
-    flash.map do |type, msg|
-      content_tag :p, flash[type], class: "flash #{type}"
+    flash.map do |type, message|
+      content_tag :p, message, class: "flash #{type}"
     end.join().html_safe
   end
 
