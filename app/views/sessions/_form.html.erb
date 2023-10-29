@@ -1,8 +1,6 @@
 <%= form_with url: sessions_path, local: true do |form| %>
-  <% if flash %>
-  <%= flash_message %>
-  <% end %>
-
+    <%= flash_message %>
+    
   <p>
     <%= form.label :email %><br>
     <%= form.text_field :email, id: :email %>
