@@ -5,7 +5,7 @@ module ApplicationHelper
 
   def flash_message
     flash.map do |type, message|
-      content_tag :p, message, class: "flash #{type}" if !message.empty?  
+      content_tag :p, message, class: "flash #{type}" if message.presence?  
     end.join().html_safe
   end
 
