@@ -1,7 +1,6 @@
 
   <tr>
     <td><strong><%= test.title %></strong></td>
-    
     <td><%= button_to 'Start', start_test_path(test) %> </td> 
     <td><%= link_to t('actions.show'), test_path(test)%> </td>
     <td><%= link_to t('actions.edit'), edit_test_path(test)%> </td>
@@ -10,7 +9,6 @@
        data: { confirm: 'Are you sure?' } %>
   </tr>
   <tr>
-    <td style="font-size:12px" >Level: <%=test.level%> | Questions: <%=test.questions.count%></td> 
+    <td style="font-size:12px" > <%=test_level(test)%> | Questions: <%=test.questions.count%></td> 
   </tr>
 
-  
