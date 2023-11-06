@@ -1,8 +1,7 @@
 users = User.create!(
   [
-    { user: 'Ed', email: 'ed@gmail.com' },
-    { user: 'David' , email: 'david@gmail.com' },
-    { user: 'Adel' , email: 'adel@gmail.com' }
+    { name: 'Ed', surname: 'Gimaev', email: 'ed@gmail.com', password: '123123', password_confirmation: '123123', user_type: "Admin" },
+    { name: 'Adel', surname: 'Gimaeva', email: 'adel@gmail.com', password: '123123', password_confirmation: '123123' }
   ]
 )
 

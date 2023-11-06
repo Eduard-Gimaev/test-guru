@@ -11,13 +11,15 @@
   </head>
 
   <body>
-    <% if logged_in? %>
-      <p class="nav user">Welcome, <b><%= current_user.user %>(<%= current_user.user %>)</b></p>
-      <p class="nav signout"> <%= link_to 'Sign out', session_path(session),
+    <% if user_signed_in? %>
+      <p class="nav user">Welcome, <b><%= current_user.name current_user.surname %></b></p>
+      <p class="nav signout"> <%= link_to 'logout', destroy_user_session_path,
                 method: :delete,
-                data: { confirm: 'Are you sure to sign out?' }  %> </p>
+                data: { confirm: 'Are you sure to logout?' }  %> </p>
     <% end %>
-    
+
+    <%= flash_message %>
+
     <%= yield %>
     <%= render 'shared/footer' %>
   </body>

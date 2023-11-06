@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       redirect_to cookies[:request_page] || tests_path
       cookies.delete (:request_page)
     else
-      flash.now[:alert] = 'Are you a Guru? Verify your Email and Password please or Sing up'
+      flash.now[:alert] = 'Are you a Guru? Verify your Email or Password please or Singup'
       render :new
     end
   end
