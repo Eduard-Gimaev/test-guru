@@ -17,7 +17,7 @@ module TestGuru
     # in config/environments, which are processed later.
     #
     config.active_record.default_timezone = :local
-    config.i18n.available_locales = %i[en ru]
+    config.i18n.available_locales = :en
     config.i18n.default_locale = :en
     # config.eager_load_paths << Rails.root.join("extras")
   end

@@ -43,6 +43,7 @@ class TestsController < ApplicationController
   end
 
   private
+  
   def find_tests
     @tests = Test.all
   end
