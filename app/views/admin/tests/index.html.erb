@@ -1,9 +1,11 @@
 <table border = "1">
 <caption>TESTS:</caption>
-  
+  <tr>
+  <th colspan="5"><%= link_to 'New test', new_admin_test_path %></th>
+  </tr>
   <tr>
   <th>Title</th>
-  <th>Actions</th>
+  <th colspan="4">Actions</th>
   </tr>
 <%= render @tests%>
 </table>

@@ -1,12 +1,6 @@
-
-  <tr>
+<tr>
     <td><strong><%= test.title %></strong></td>
-    <td><%= button_to 'Start', start_test_path(test) %> </td> 
-    <td><%= link_to t('actions.show'), test_path(test)%> </td>
-    <td><%= link_to t('actions.edit'), edit_test_path(test)%> </td>
-    <td><%= link_to t('.delete'), test_path(test), 
-       method: :delete, 
-       data: { confirm: 'Are you sure?' } %>
+    <td rowspan="2" ><%= button_to 'Start', start_test_path(test) %> </td> 
   </tr>
   <tr>
     <td style="font-size:12px" > <%=test_level(test)%> | Questions: <%=test.questions.count%></td> 
