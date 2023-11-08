@@ -12,8 +12,7 @@ class Admin::AnswersController < Admin::BaseController
   def create
     @answer = @question.answers.new(answer_params)
     if @answer.save
-      redirect_to @answer
-    else
+      redirect_to admin_question_path(@question)
       render :new
     end
   end
@@ -23,7 +22,7 @@ class Admin::AnswersController < Admin::BaseController
 
   def update
     if @answer.update(answer_params)
-      redirect_to @answer
+      redirect_to answer_url(@answer)
     else
       render :edit
     end
