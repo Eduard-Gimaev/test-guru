@@ -1,6 +1,7 @@
 class TestsController < ApplicationController
-  before_action :find_tests, only: %i[index]
-  before_action :find_test, only: %i[start]
+  before_action :authenticate_user!, only: :start
+  before_action :find_tests, only: %i[index destroy]
+  before_action :find_test, only: %i[start show edit update destroy]
   
   def index
   end
@@ -10,8 +11,12 @@ class TestsController < ApplicationController
     redirect_to current_user.test_passage(@test)
   end
 
-  private
+  def show
+  end
+
   
+
+  private
   def find_tests
     @tests = Test.all
   end
