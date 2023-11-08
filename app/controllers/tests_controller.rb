@@ -14,8 +14,6 @@ class TestsController < ApplicationController
   def show
   end
 
-  
-
   private
   def find_tests
     @tests = Test.all
