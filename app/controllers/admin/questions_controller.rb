@@ -24,6 +24,7 @@ class Admin::QuestionsController < Admin::BaseController
   def update
     if @question.update(question_params)
       redirect_to admin_question_url(@question)
+    else
       render :edit
     end
   end
