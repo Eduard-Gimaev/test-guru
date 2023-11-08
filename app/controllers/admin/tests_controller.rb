@@ -1,4 +1,4 @@
-class Admin::TestsController < ApplicationController
+class Admin::TestsController < Admin::BaseController
   before_action :find_tests, only: %i[index destroy]
   before_action :find_test, only: %i[start show edit update destroy]
   
