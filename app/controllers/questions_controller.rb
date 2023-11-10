@@ -8,32 +8,7 @@ class QuestionsController < ApplicationController
   def show
   end
 
-  def new
-    @question = @test.questions.new
-  end
   
-  def create
-    @question = @test.questions.new(question_params)
-    if @question.save
-      redirect_to @question
-    else
-      render :new
-    end
-  end
-
-  def update
-    if @question.update(question_params)
-      redirect_to @question
-    else
-      render :edit
-    end
-  end
-
-  def destroy
-    @question.destroy
-    redirect_to test_path(@question.test)
-  end
-
   private
 
   def find_test
@@ -42,10 +17,6 @@ class QuestionsController < ApplicationController
 
   def find_question
     @question = Question.find(params[:id])
-  end
-
-  def question_params
-    params.require(:question).permit(:body)
   end
   
   def rescue_question_not_found
