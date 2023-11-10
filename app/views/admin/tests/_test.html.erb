@@ -1,7 +1,6 @@
 
   <tr>
     <td><strong><%= test.title %></strong></td>
-    <td rowspan="2" ><%= button_to 'Start', start_test_path(test) %> </td> 
     <td rowspan="2" ><%= link_to t('actions.show'), admin_test_path(test)%> </td>
     <td rowspan="2" ><%= link_to t('actions.edit'), edit_admin_test_path(test)%> </td>
     <td rowspan="2" ><%= link_to t('.delete'), admin_test_path(test), 
