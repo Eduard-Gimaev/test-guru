@@ -1,17 +1,15 @@
 <table border = "1">
-<caption>TESTS:</caption>
+  <caption><%= t('.header') %>:</caption>
   <tr>
-  <th colspan="5"><%= link_to 'New test', new_admin_test_path %></th>
+  <th colspan="5"><%= link_to t('.new_test'), new_admin_test_path %></th>
+    <th><%= t('.title') %></th>
+    <th colspan="3" ><%= t('.actions') %></th>
   </tr>
-  <tr>
-  <th>Title</th>
-  <th colspan="3">Actions</th>
-  </tr>
-<%= render @tests%>
+  <%= render @tests %>
 </table>
 <% unless user_signed_in? %>
   <p>
-  | <%= link_to 'Log in', new_user_session_path %> |
-  <%= link_to 'Sign up', new_user_registration_path %> |
+  | <%= link_to t('.login'), new_user_session_path %> |
+  <%= link_to t('.signup'), new_user_registration_path %> |
   </p>
 <% end %>

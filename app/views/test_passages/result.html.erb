@@ -1,10 +1,13 @@
 
-<h1>The passing test: <%= t('.header', title: @test_passage.test.title) %> is completed!</h1>
+<h1><%= t('.header', title: @test_passage.test.title) %></h1>
+<p><%= t('.score', user: current_user.user) %> 
 <% if @test_passage.success? %>
-  <p>Dear <%=current_user.user%>, your score <span class="color_green">= <%= @test_passage.correct_answers_count %>% =</span> Test passed.</p>
+  <span class="color_green"><%= @test_passage.correct_answers_count %>
+  </span><%= t('.success') %></p>
 <% else %>
-  <p>Dear <%=current_user.user%>, your score <span class="color_red">= <%= @test_passage.correct_answers_count %>% =</span> Try again.</p>
+  <span class="color_red"><%= @test_passage.correct_answers_count %>
+  </span> <%= t('.fail') %></p>
 <% end %>
 
-<%= link_to 'Back to tests', tests_path %>
+<%= link_to t('.back'), tests_path %>
 
