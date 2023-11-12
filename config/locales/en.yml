@@ -1,5 +1,36 @@
 en:
+  level:
+    elementary: "Elementary"
+    intermediate: "Intermediate"
+    advanced: "Advanced"
+    hard: "Hard"
+    hero: "Hero"
+  helpers:
+    submit:
+      answer:
+        create: "Create answer"
+        update: "Update answer"
+      question:
+        create: "Create question"
+        update: "Save question"
+      test:
+        create: "Create test"
+        update: "Save test"
+    select:
+      prompt: "Select a category"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category" 
+#ADMIN
+  admin:
+    answer:
+      
+    question:
+    tests:
 
+  
   shared:
     errors:
       header:

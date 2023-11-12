@@ -2,8 +2,10 @@
   <caption><%= t('.header') %>:</caption>
   <tr>
   <th colspan="5"><%= link_to t('.new_test'), new_admin_test_path %></th>
-    <th><%= t('.title') %></th>
-    <th colspan="3" ><%= t('.actions') %></th>
+  </tr>
+  <tr>
+  <th><%= t('.title') %></th>
+  <th colspan="3" ><%= t('.actions') %></th>
   </tr>
   <%= render @tests %>
 </table>
