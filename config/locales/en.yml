@@ -67,8 +67,6 @@ en:
         title: "Title"
       new:
         header: "Creating a new test"
-      create:
-        success: "Test was successfully created."
       show:
         header: "Test's details"
         category: "Category: %{category}"
@@ -78,7 +76,6 @@ en:
     nav:
       header: "TestGure | AdminKa"
 
-  
   shared:
     errors:
       header:
