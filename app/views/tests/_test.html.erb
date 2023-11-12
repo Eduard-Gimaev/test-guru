@@ -1,6 +1,6 @@
 <tr>
     <td><strong><%= test.title %></strong></td>
-    <td rowspan="2" ><%= button_to t('.start'), start_test_path(test) %> </td> 
+    <td rowspan="2" ><%= button_to t('actions.start'), start_test_path(test) %> </td> 
   </tr>
   <tr>
     <td style="font-size:12px" > <%=test_level(test)%> | <%= t('.questions') %>: <%=test.questions.count%></td> 

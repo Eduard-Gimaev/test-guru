@@ -1,10 +1,28 @@
 en:
+  actions: 
+    welcome: "Welcome, "
+    actions: "Actions"
+    all_tests: "All Tests"
+    start: "Start"
+    new_test: "New test"
+    new_question: "New question"
+    new_answer: "New answer"
+    show: "Show"
+    edit: "Edit"
+    delete: "Delete"
+    confirm: "Are you sure?"
+    signup: "Signup"
+    login: "Login"
+    logout: "Logout"
+    back: "Back"
+
   level:
     elementary: "Elementary"
     intermediate: "Intermediate"
     advanced: "Advanced"
     hard: "Hard"
     hero: "Hero"
+
   helpers:
     submit:
       answer:
@@ -25,10 +43,40 @@ en:
         category_id: "Category" 
 #ADMIN
   admin:
-    answer:
-      
-    question:
+    answers:
+      edit:
+        header: "Editing answer"
+      new:
+        header: "Creating a new answer"
+      show:
+        header: "Answer's details"
+        answer: "Answer:"
+        correct: "Correct:"
+    questions:
+      new:
+        header: "Creating a new question"
+      show:
+        header: "Question's details"
+        answer: "Answer"
+        edit_question: "Edit question"
     tests:
+      edit:
+        header: "Edit %{title} test"
+      index:
+        header: "Tricky Tests"
+        title: "Title"
+      new:
+        header: "Creating a new test"
+      create:
+        success: "Test was successfully created."
+      show:
+        header: "Test's details"
+        category: "Category: %{category}"
+        title: "Test: %{title}"
+        level: "Level: %{level}"
+        quesiton: "Question"
+    nav:
+      header: "TestGure | AdminKa"
 
   
   shared:
@@ -56,10 +104,7 @@ en:
   tests:
     test:
       questions: "Questions"
-      start: "Start"
     index:
       header: "Tricky Tests"
       title: "Title"
-      actions: "Actions"
-      login: "login"
-      sign: "signup"
+
