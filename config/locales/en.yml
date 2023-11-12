@@ -31,3 +31,40 @@
 
 en:
   hello: "Hello world"
+
+  tests:
+    index
+      header: "Tricky Tests"
+
+admin:
+  tests:
+    index:
+     header: "Tricky Tests"
+
+admin:
+  tests:
+    create:
+      success: "Test was succesfully created."
+    index:
+      header: "Tricky Tests"
+
+helpers:
+  submit:
+    test:
+      create: "Create Test"
+      update: "Update Test"
+
+helpers:
+  submit:
+    test:
+      create: "Create Test"
+      update: "Create Test"
+  label:
+    test:
+      title: "Название"
+      level: "Уровень"
+      category_id: "Категория"
+
+test_passages:
+  result:
+    header: "Tes %{title} was succesfully completed!"      

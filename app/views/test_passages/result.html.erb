@@ -1,4 +1,5 @@
-<h1>The passing test: <%= @test_passage.test.title %> is completed!</h1>
+
+<h1>The passing test: <%= t('.header', title: @test_passage.test.title) %> is completed!</h1>
 <% if @test_passage.success? %>
   <p>Dear <%=current_user.user%>, your score <span class="color_green">= <%= @test_passage.correct_answers_count %>% =</span> Test passed.</p>
 <% else %>
