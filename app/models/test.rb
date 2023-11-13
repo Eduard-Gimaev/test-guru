@@ -18,5 +18,9 @@ class Test < ApplicationRecord
     by_category(category).order(title: :desc).pluck(:title)
   end
 
+  def admin?
+    self.type == "Admin"
+  end
+
 end
 

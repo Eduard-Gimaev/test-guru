@@ -1,6 +1,7 @@
 en:
   actions: 
-    welcome: "Welcome, "
+    hello: "Hello, %{name}!"
+    welcome: "Welcome, %{name}!"
     actions: "Actions"
     all_tests: "All Tests"
     start: "Start"
@@ -60,6 +61,8 @@ en:
         answer: "Answer"
         edit_question: "Edit question"
     tests:
+      create:
+      success: "Test was succesfully created."
       edit:
         header: "Edit %{title} test"
       index:
@@ -104,4 +107,8 @@ en:
     index:
       header: "Tricky Tests"
       title: "Title"
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test!"
+
 
