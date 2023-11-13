@@ -1,8 +1,7 @@
-en:
+ru:
   actions: 
     hello: "Hello, %{name}!"
     welcome: "Welcome, %{name}!"
-    admin: "Admin"
     actions: "Actions"
     all_tests: "All Tests"
     start: "Start"
