@@ -17,6 +17,7 @@ en:
     login: "Login"
     logout: "Logout"
     back: "Back"
+    next: "Next"
 
   level:
     elementary: "Elementary"
@@ -90,15 +91,13 @@ en:
       score: "Dear %{user} your score: "
       success: "Test passed."
       fail: "Try again."
-      back: "Back to tests"
     show:
       header: "You are passing the %{title} test"
       question: "Question № %{current_question} / %{all_questions}"
-      next: "Next"
-      back: "All tests"
+      
   tests:
     test:
-      questions: "Questions"
+      question: "Question"
     index:
       header: "Tricky Tests"
       title: "Title"

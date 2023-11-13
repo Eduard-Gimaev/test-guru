@@ -1,108 +1,108 @@
 ru:
   actions: 
-    hello: "Hello, %{name}!"
-    welcome: "Welcome, %{name}!"
-    actions: "Actions"
-    all_tests: "All Tests"
-    start: "Start"
-    new_test: "New test"
-    new_question: "New question"
-    new_answer: "New answer"
-    show: "Show"
-    edit: "Edit"
-    delete: "Delete"
-    confirm: "Are you sure?"
-    signup: "Signup"
-    login: "Login"
-    logout: "Logout"
-    back: "Back"
+    hello: "Приетствую, %{name}!"
+    welcome: "Добро пожаловать, %{name}!"
+    actions: "Действия"
+    all_tests: "Тесты"
+    start: "Старт"
+    new_test: "Новый тест"
+    new_question: "Новый вопрос"
+    new_answer: "Новый ответ"
+    show: "Показать"
+    edit: "Изменить"
+    delete: "Удалить"
+    confirm: "Вы уверены?"
+    signup: "Зарегистрироваться"
+    login: "Войти"
+    logout: "Выйти"
+    back: "Назад"
 
   level:
-    elementary: "Elementary"
-    intermediate: "Intermediate"
-    advanced: "Advanced"
-    hard: "Hard"
-    hero: "Hero"
+    elementary: "Начинающий"
+    intermediate: "Средний"
+    advanced: "Продвинутый"
+    hard: "Сложный"
+    hero: "Герой"
 
   helpers:
     submit:
-      create: 'Create %{model}'
-      update: 'Update %{model}'
-      submit: 'Save %{model}'
+      create: 'Создать %{model}'
+      update: 'Обновить %{model}'
+      submit: 'Сохранить %{model}'
     select:
-      prompt: "Select a category"
+      prompt: "Выбрать категорию"
     label:
       test:
-        title: "Title"
-        level: "Level"
-        category_id: "Category" 
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория" 
 #ADMIN
   admin:
     answers:
       edit:
-        header: "Editing answer"
+        header: "Изменение ответа"
       new:
-        header: "Creating a new answer"
+        header: "Создание нового ответа"
       show:
-        header: "Answer's details"
-        answer: "Answer:"
-        correct: "Correct:"
+        header: "Детали ответа"
+        answer: "Ответ:"
+        correct: "Корретно:"
     questions:
       new:
-        header: "Creating a new question"
+        header: "Создание нового вопроса"
       show:
-        header: "Question's details"
-        answer: "Answer"
-        edit_question: "Edit question"
+        header: "Детали вопроса"
+        answer: "Ответ"
+        edit_question: "Изменить вопрос"
     tests:
       create:
-      success: "Test was succesfully created."
+      success: "Тест был успешно создан."
       edit:
-        header: "Edit %{title} test"
+        header: "Изменить %{title} тест"
       index:
-        header: "Tricky Tests"
-        title: "Title"
+        header: "Доступные тесты"
+        title: "Название"
       new:
-        header: "Creating a new test"
+        header: "Создание нового теста"
       show:
-        header: "Test's details"
-        category: "Category: %{category}"
-        title: "Test: %{title}"
-        level: "Level: %{level}"
-        quesiton: "Question"
+        header: "Детали теста"
+        category: "Категория: %{category}"
+        title: "Тест: %{title}"
+        level: "Уровень: %{level}"
+        quesiton: "Вопрос"
     nav:
-      header: "TestGure | AdminKa"
+      header: "TestGure | АдминКа"
 
   shared:
     errors:
       header:
-        one: "%{count} error detected"
-        other: "%{count} errors detected"
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружено %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
     footer:
-      header: "About Test Guru"
-      author: "Test-Guru by Eduard Gimaev on the github"
-      link: "Educational project in an online school Thinknetica"
+      header: "Инфо о Test Guru"
+      author: "Test-Guru от Эдуарда Гимаева на github"
+      link: "Образовательный проект от онлайн школы Thinknetica"
 #USER
   test_passages:
     result:
-      header: "Test %{title} has been successfully completed!"
-      score: "Dear %{user} your score: "
-      success: "Test passed."
-      fail: "Try again."
-      back: "Back to tests"
+      header: "Тест %{title} был успешно завершен!"
+      score: "Дорогой %{user} Ваш результат: "
+      success: "Тест пройден."
+      fail: "Попробуйте ещё раз."
     show:
-      header: "You are passing the %{title} test"
-      question: "Question № %{current_question} / %{all_questions}"
-      next: "Next"
-      back: "All tests"
+      header: "Вы проходите %{title} тест"
+      question: "Вопрос № %{current_question} / %{all_questions}"
   tests:
     test:
-      questions: "Questions"
+      question: "Вопрос"
     index:
-      header: "Tricky Tests"
-      title: "Title"
+      header: "Доступные тесты"
+      title: "Название"
   tests_mailer:
     completed_test:
-      subject: "You just completed the TestGuru test!"
+      subject: "Вы только что закончили TestGuru тест!"
 
 
