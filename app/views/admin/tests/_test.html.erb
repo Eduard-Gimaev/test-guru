@@ -3,11 +3,11 @@
     <td><strong><%= test.title %></strong></td>
     <td rowspan="2" ><%= link_to t('actions.show'), admin_test_path(test)%> </td>
     <td rowspan="2" ><%= link_to t('actions.edit'), edit_admin_test_path(test)%> </td>
-    <td rowspan="2" ><%= link_to t('.delete'), admin_test_path(test), 
+    <td rowspan="2" ><%= link_to t('actions.delete'), admin_test_path(test), 
        method: :delete, 
-       data: { confirm: 'Are you sure?' } %>
+       data: { confirm: 'actions.confirm' } %>
   </tr>
   <tr>
-    <td style="font-size:12px" > <%=test_level(test)%> | Questions: <%=test.questions.count%></td> 
+    <td style="font-size:12px" > <%=test_level(test)%> | <%=test.questions.count%></td> 
   </tr>
 

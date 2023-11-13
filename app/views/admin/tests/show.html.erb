@@ -1,13 +1,17 @@
+<h3><%= t('.header') %></h3>
+<p><%= t('.category', category: @test.category.title )%></p>
+<p><%= t('.title', title: @test.title)%></p>
+<p><%= t('.level', level: @test.level)%></p>
 
-<h2><%= @test.title %> test details:</h2>
 <table border = "1">
   <tr>
-    <th>Question</th>
-    <th colspan="4">Actions</th>
+    <th><%= t('.question')%></th>
+    <th colspan="4"><%= t('actions.actions')%></th>
   </tr>
     <%= render @test.questions %>
 </table>
 </br>
-<%= link_to t('.all_tests'), admin_tests_path %> |
-<%= link_to 'New question', new_admin_test_question_path(@test) %> |
+<%= link_to t('actions.all_tests'), admin_tests_path %> |
+<%= link_to t('actions.new_question'), new_admin_test_question_path(@test) %> |
+
 

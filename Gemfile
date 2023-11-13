@@ -23,6 +23,10 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise', '~> 4.0'
 
+#LOCALIZATION
+gem 'rails-i18n', '~> 6.0.0'
+gem 'devise-i18n'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -45,6 +49,7 @@ group :development do
   gem 'spring'
   gem 'letter_opener'
 end
+
 
 group :test do
   # Adds support for Capybara system testing and selenium driver

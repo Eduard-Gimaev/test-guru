@@ -1,0 +1,110 @@
+ru:
+  actions: 
+    hello: "Приетствую, %{name}!"
+    welcome: "Добро пожаловать, %{name}!"
+    admin: "Админ"
+    actions: "Действия"
+    all_tests: "Тесты"
+    start: "Старт"
+    new_test: "Новый тест"
+    new_question: "Новый вопрос"
+    new_answer: "Новый ответ"
+    show: "Показать"
+    edit: "Изменить"
+    delete: "Удалить"
+    confirm: "Вы уверены?"
+    signup: "Зарегистрироваться"
+    login: "Войти"
+    logout: "Выйти"
+    back: "Назад"
+    next: "Следующий"
+
+  level:
+    elementary: "Начинающий"
+    intermediate: "Средний"
+    advanced: "Продвинутый"
+    hard: "Сложный"
+    hero: "Герой"
+
+  helpers:
+    submit:
+      create: 'Создать %{model}'
+      update: 'Обновить %{model}'
+      submit: 'Сохранить %{model}'
+    select:
+      prompt: "Выбрать категорию"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория" 
+#ADMIN
+  admin:
+    answers:
+      edit:
+        header: "Изменение ответа"
+      new:
+        header: "Создание нового ответа"
+      show:
+        header: "Детали ответа"
+        answer: "Ответ:"
+        correct: "Корректно:"
+    questions:
+      new:
+        header: "Создание нового вопроса"
+      show:
+        header: "Детали вопроса"
+        answer: "Ответ"
+        edit_question: "Изменить вопрос"
+    tests:
+      create:
+      success: "Тест был успешно создан."
+      edit:
+        header: "Изменить %{title} тест"
+      index:
+        header: "Доступные тесты"
+        title: "Название"
+      new:
+        header: "Создание нового теста"
+      show:
+        header: "Детали теста"
+        category: "Категория: %{category}"
+        title: "Тест: %{title}"
+        level: "Уровень: %{level}"
+        quesiton: "Вопрос"
+    nav:
+      header: "TestGure | АдминКа"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружено %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
+    footer:
+      header: "Инфо о Test Guru"
+      author: "Test-Guru от Эдуарда Гимаева на github"
+      link: "Образовательный проект от онлайн школы Thinknetica"
+#USER
+  test_passages:
+    result:
+      header: "Тест %{title} был успешно завершен!"
+      score: "Дорогой %{user} Ваш результат: "
+      success: "Тест пройден."
+      fail: "Попробуйте ещё раз."
+    show:
+      header: "Вы проходите %{title} тест"
+      question: "Вопрос № %{current_question} / %{all_questions}"
+  tests:
+    test:
+      question: "Вопрос"
+    index:
+      header: "Доступные тесты"
+      title: "Название"
+  tests_mailer:
+    completed_test:
+      subject: "Вы закончили TestGuru тест!"
+
+
