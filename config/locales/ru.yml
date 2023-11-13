@@ -17,6 +17,7 @@ ru:
     login: "Войти"
     logout: "Выйти"
     back: "Назад"
+    next: "Следующий"
 
   level:
     elementary: "Начинающий"
