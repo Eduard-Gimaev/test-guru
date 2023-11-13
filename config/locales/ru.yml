@@ -2,6 +2,7 @@ ru:
   actions: 
     hello: "Приетствую, %{name}!"
     welcome: "Добро пожаловать, %{name}!"
+    admin: "Админ"
     actions: "Действия"
     all_tests: "Тесты"
     start: "Старт"
@@ -46,7 +47,7 @@ ru:
       show:
         header: "Детали ответа"
         answer: "Ответ:"
-        correct: "Корретно:"
+        correct: "Корректно:"
     questions:
       new:
         header: "Создание нового вопроса"
@@ -103,6 +104,6 @@ ru:
       title: "Название"
   tests_mailer:
     completed_test:
-      subject: "Вы только что закончили TestGuru тест!"
+      subject: "Вы закончили TestGuru тест!"
 
 
