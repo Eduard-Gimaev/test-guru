@@ -15,6 +15,7 @@ ru:
       user:
         first_name: "Имя"
         last_name: "Фамилия"
+        type: "Тип"
         email: "Email"
       category:
         title: "Название"

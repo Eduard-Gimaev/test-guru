@@ -15,6 +15,7 @@ en:
       user:
         first_name: "Name"
         last_name: "Surname"
+        type: "Type"
         email: "email"
       category:
         title: "Title"
