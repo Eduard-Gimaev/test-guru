@@ -1,6 +1,6 @@
 ru:
   actions: 
-    hello: "Приетствую, %{name}!"
+    hello: "Приветствую, %{name}!"
     welcome: "Добро пожаловать, %{name}!"
     admin: "Админ"
     actions: "Действия"

@@ -6,9 +6,3 @@
   </tr>
   <%= render @tests %>
 </table>
-<% unless user_signed_in? %>
-  <p>
-  | <%= link_to t('actions.login'), new_user_session_path %> |
-  <%= link_to t('actions.signup'), new_user_registration_path %> |
-  </p>
-<% end %>

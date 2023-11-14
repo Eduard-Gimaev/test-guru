@@ -13,12 +13,18 @@
   <body>
     <% if user_signed_in? %>
       <p class="nav signout"><%=  t('actions.welcome', name: current_user.email ) %>| 
-      <%= link_to 'logout', destroy_user_session_path, method: :delete %> </p>
+      <%= link_to t('actions.logout'), destroy_user_session_path, method: :delete %> </p>
     <% end %>
 
     <%= flash_message %>
-
     <%= yield %>
+    
+    <%unless user_signed_in?%>
+      <p>
+        | <%= link_to t('actions.login'), new_user_session_path %> |
+        <%= link_to t('actions.signup'), new_user_registration_path %> |
+      </p>
+    <% end %>
     <%= render 'shared/footer' %>
   </body>
 </html>
