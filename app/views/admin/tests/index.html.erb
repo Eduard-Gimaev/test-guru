@@ -1,12 +1,15 @@
-<table border = "1">
-  <tr><%= t('.header') %>:</tr>
-  <tr>
-  <th colspan="5"><%= link_to t('actions.new_test'), new_admin_test_path %></th>
-  </tr>
-  <tr>
-  <th><%= t('.title') %></th>
-  <th colspan="3" ><%= t('actions.actions') %></th>
-  </tr>
-  <%= render @tests %>
-</table>
-
+<div class="row justify-content-center">
+  <div class="col col-md-4">
+    <table>
+      <tr style="text-align:center" colspan="4" ><%= t('.header')%></tr>
+      <tr>
+      <th colspan="4"><%= link_to t('actions.new_test'), new_admin_test_path %></th>
+      </tr>
+      <tr>
+      <th><%= t('.title') %></th>
+      <th colspan="3" ><%= t('actions.actions') %></th>
+      </tr>
+      <%= render @tests %>
+    </table>
+  </div>       
+</div> 
