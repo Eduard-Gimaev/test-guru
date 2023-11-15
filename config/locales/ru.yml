@@ -2,7 +2,8 @@ ru:
   actions: 
     hello: "Приветствую, %{name}!"
     welcome: "Добро пожаловать, %{name}!"
-    admin: "Админ"
+    remember_me: "запомнить меня"
+    admin: "АдминKa"
     actions: "Действия"
     all_tests: "Тесты"
     start: "Старт"

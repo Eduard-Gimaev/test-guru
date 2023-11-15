@@ -1,5 +1,5 @@
 <table border = "1">
-  <caption><%= t('.header') %>:</caption>
+  <tr><%= t('.header') %>:</tr>
   <tr>
   <th colspan="5"><%= link_to t('actions.new_test'), new_admin_test_path %></th>
   </tr>
@@ -9,9 +9,4 @@
   </tr>
   <%= render @tests %>
 </table>
-<% unless user_signed_in? %>
-  <p>
-  | <%= link_to t('actions.login'), new_user_session_path %> |
-  <%= link_to t('actions.signup'), new_user_registration_path %> |
-  </p>
-<% end %>
+
