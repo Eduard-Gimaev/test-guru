@@ -1,14 +1,8 @@
-<table border = "1">
-  <caption><%= t('.header') %>:</caption>
+<table border = "0">
+  <tr><%= t('.header') %>:</tr>
   <tr>
     <th><%= t('.title') %></th>
     <th><%= t('actions.actions') %></th>
   </tr>
   <%= render @tests %>
 </table>
-<% unless user_signed_in? %>
-  <p>
-  | <%= link_to t('actions.login'), new_user_session_path %> |
-  <%= link_to t('actions.signup'), new_user_registration_path %> |
-  </p>
-<% end %>

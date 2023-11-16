@@ -2,7 +2,8 @@ en:
   actions: 
     hello: "Hello, %{name}!"
     welcome: "Welcome, %{name}!"
-    admin: "Admin"
+    remember_me: "remember me"
+    admin: "AdminKa"
     actions: "Actions"
     all_tests: "All Tests"
     start: "Start"
