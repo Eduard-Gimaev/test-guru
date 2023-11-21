@@ -19,6 +19,7 @@ en:
     logout: "Logout"
     back: "Back"
     next: "Next"
+    gist_question: "Gist_question"
 
   level:
     elementary: "Elementary"
@@ -95,6 +96,10 @@ en:
     show:
       header: "You are passing the %{title} test"
       question: "Question № %{current_question} / %{all_questions}"
+    gist: 
+      success: "Gist has been succesfully saved"
+      failure: "Gist has not been saved"
+
       
   tests:
     test:
@@ -105,5 +110,6 @@ en:
   tests_mailer:
     completed_test:
       subject: "You just completed the TestGuru test!"
-
+  services:
+    description: "A question about %{title} form TestGuru"
 

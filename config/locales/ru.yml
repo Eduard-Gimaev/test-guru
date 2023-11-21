@@ -19,6 +19,7 @@ ru:
     logout: "Выйти"
     back: "Назад"
     next: "Следующий"
+    gist_question: "Gist_вопрос"
 
   level:
     elementary: "Начинающий"
@@ -98,6 +99,9 @@ ru:
     show:
       header: "Вы проходите %{title} тест"
       question: "Вопрос № %{current_question} / %{all_questions}"
+    gist: 
+      success: "Gist успешно сохранён"
+      failure: "Gist не был сохранён"
   tests:
     test:
       question: "Вопрос"
@@ -107,5 +111,7 @@ ru:
   tests_mailer:
     completed_test:
       subject: "Вы закончили TestGuru тест!"
+  services:
+    description: "Вопрос о %{title} из TestGuru"
 
 
