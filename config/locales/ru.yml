@@ -112,6 +112,7 @@ ru:
     completed_test:
       subject: "Вы закончили TestGuru тест!"
   services:
-    description: "Вопрос о %{title} из TestGuru"
+    gist_question_service:
+      description: "Вопрос о %{title} из TestGuru"
 
 
