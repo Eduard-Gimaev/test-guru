@@ -12,8 +12,7 @@ class GistQuestionService
   private
 
   def gist_params
-    { #{description: t('.description' , test: @test.title)},
-      description: t('.description' , test: @test.title),
+    { description: I18n.t('.description', title: @test.title),
       files: {
         'test-guru-question.txt' => {
           content: gist_content
@@ -21,6 +20,7 @@ class GistQuestionService
       }
     }
   end
+  
   def gist_content
     content = [@question.body]
     content += @question.answers.pluck(:body)

@@ -40,6 +40,9 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория" 
+#Gist
+  description: "Вопрос о %{test_title} из TestGuru"
+
 #ADMIN
   admin:
     answers:
@@ -92,8 +95,8 @@ ru:
 #USER
   test_passages:
     result:
-      header: "Тест %{title} был успешно завершен!"
-      score: "Дорогой %{user} Ваш результат: "
+      header: "Дорогой %{user}, тест %{title} был успешно завершен!"
+      score: "Ваш результат: "
       success: "Тест пройден."
       fail: "Попробуйте ещё раз."
     show:
@@ -111,8 +114,3 @@ ru:
   tests_mailer:
     completed_test:
       subject: "Вы закончили TestGuru тест!"
-  services:
-    gist_question_service:
-      description: "Вопрос о %{title} из TestGuru"
-
-
