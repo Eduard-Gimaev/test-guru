@@ -25,6 +25,7 @@ gem 'devise', '~> 4.0'
 
 #NETWORKING
 
+gem "octokit", "~> 5.0"
 gem 'faraday'
 
 #LOCALIZATION
