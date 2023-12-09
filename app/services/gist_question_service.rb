@@ -1,8 +1,9 @@
 class GistQuestionService
+
   def initialize(question, client: nil)
       @question = question
       @test = @question.test
-      @client = client || GitHubClient.new
+      @client = client || client_default
   end
 
   def call
@@ -10,6 +11,11 @@ class GistQuestionService
   end
 
   private
+
+  def client_default
+    Octokit::Client.new(access_token: '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' )
+    # ENV.fetch('GITHUB_TOKEN')
+  end
 
   def gist_params
     { description: I18n.t('.description', test_title: @test.title),

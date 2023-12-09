@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'gists/new'
+  get 'gists/create'
+  get 'gists/edit'
+  get 'gists/update'
+  get 'gists/destroy'
+  get 'gists/index'
+  get 'gists/show'
   root to: 'tests#index'
 
   devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout},
