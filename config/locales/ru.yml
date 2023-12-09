@@ -93,6 +93,9 @@ ru:
       author: "Test-Guru от Эдуарда Гимаева на github"
       link: "Образовательный проект от онлайн школы Thinknetica"
 #USER
+  gist: 
+    success: "Gist успешно сохранён"
+    failure: "Gist не был сохранён"
   test_passages:
     result:
       header: "Дорогой %{user}, тест %{title} был успешно завершен!"
@@ -102,9 +105,7 @@ ru:
     show:
       header: "Вы проходите %{title} тест"
       question: "Вопрос № %{current_question} / %{all_questions}"
-    gist: 
-      success: "Gist успешно сохранён"
-      failure: "Gist не был сохранён"
+    
   tests:
     test:
       question: "Вопрос"

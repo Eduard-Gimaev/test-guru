@@ -90,6 +90,9 @@ en:
       author: "Test-Guru by Eduard Gimaev on the github"
       link: "Educational project in an online school Thinknetica"
 #USER
+  gists:
+    success: "Gist has been succesfully saved"
+    failure: "Gist has not been saved"
   test_passages:
     result:
       header: "Dear %{user}, test %{title} has been successfully completed!"
@@ -99,9 +102,6 @@ en:
     show:
       header: "You are passing the %{title} test"
       question: "Question № %{current_question} / %{all_questions}"
-    gist: 
-      success: "Gist has been succesfully saved"
-      failure: "Gist has not been saved"
   tests:
     test:
       question: "Question"

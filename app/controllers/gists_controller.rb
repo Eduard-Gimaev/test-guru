@@ -7,7 +7,7 @@ class GistsController < ApplicationController
   end
 
   def create
-    @test_passage = TestPassage.find(params[:id])
+    @test_passage = TestPassage.find(accepted_params[:format])
     @result = GistQuestionService.new(@test_passage.current_question).call
 
     if @result.success?
@@ -26,6 +26,10 @@ class GistsController < ApplicationController
 
   def create_gist_question
     current_user.gists.build(question: @test_passage.current_question, url: @result.url).save
+  end
+
+  def accepted_params
+    params.permit(:format)
   end
 
 end
