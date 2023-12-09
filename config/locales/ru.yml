@@ -93,7 +93,7 @@ ru:
       author: "Test-Guru от Эдуарда Гимаева на github"
       link: "Образовательный проект от онлайн школы Thinknetica"
 #USER
-  gist: 
+  gists: 
     success: "Gist успешно сохранён"
     failure: "Gist не был сохранён"
   test_passages:

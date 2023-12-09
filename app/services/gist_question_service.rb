@@ -13,8 +13,8 @@ class GistQuestionService
   private
 
   def client_default
-    Octokit::Client.new(access_token: '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' )
-    # ENV.fetch('GITHUB_TOKEN')
+    Octokit::Client.new(access_token: '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' )
+    # ENV.fetch('GITHUB_TOKEN') - does not work, why?????
   end
 
   def gist_params

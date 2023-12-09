@@ -7,10 +7,10 @@ class GistsController < ApplicationController
   end
 
   def create
-    @test_passage = TestPassage.find(accepted_params[:format])
-    @result = GistQuestionService.new(@test_passage.current_question).call
+    @test_passage = TestPassage.find(test_params[:format]) 
+    @gist_question = GistQuestionService.new(@test_passage.current_question).call
 
-    if @result.success?
+    if @gist_question.success?
       create_gist_question
       flash[:notice] = "#{t('.success')} #{view_context.link_to_created_gist(@result.url)}"
     else
@@ -25,10 +25,10 @@ class GistsController < ApplicationController
   private
 
   def create_gist_question
-    current_user.gists.build(question: @test_passage.current_question, url: @result.url).save
+    current_user.gists.create(question: @test_passage.current_question, url: @gist_question.url).save
   end
 
-  def accepted_params
+  def test_params
     params.permit(:format)
   end
 
