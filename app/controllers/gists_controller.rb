@@ -22,6 +22,7 @@ class GistsController < ApplicationController
   end
 
   private
+  
   def test_params
     params.permit(:format)
   end

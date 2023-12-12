@@ -19,7 +19,7 @@ ru:
     logout: "Выйти"
     back: "Назад"
     next: "Следующий"
-    gist_question: "Gist_вопрос"
+    gist_questions: "Gists_вопросов"
 
   level:
     elementary: "Начинающий"
@@ -54,6 +54,11 @@ ru:
         header: "Детали ответа"
         answer: "Ответ:"
         correct: "Корректно:"
+    gists:
+      index:
+        question: "Вопрос:"
+        url: "Gist url:"
+        author: "Автор:"
     questions:
       new:
         header: "Создание нового вопроса"

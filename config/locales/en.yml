@@ -19,7 +19,7 @@ en:
     logout: "Logout"
     back: "Back"
     next: "Next"
-    gist_question: "Gist_question"
+    gist_questions: "Gists_questions"
 
   level:
     elementary: "Elementary"
@@ -54,6 +54,11 @@ en:
         header: "Answer's details"
         answer: "Answer:"
         correct: "Correct:"
+    gists:
+      index:
+        question: "Question"
+        url: "Gist url"
+        author: "Author"
     questions:
       new:
         header: "Creating a new question"
