@@ -7,14 +7,13 @@ class GistQuestionService
   end
 
   def call
-    @client.create_gist(gist_params)
+    result = @client.create_gist(gist_params)
   end
 
   private
 
   def client_default
-    Octokit::Client.new(access_token: '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' )
-    # ENV.fetch('GITHUB_TOKEN') - does not work, why?????
+    Octokit::Client.new(access_token: ENV.fetch('GITHUB_TOKEN'))
   end
 
   def gist_params

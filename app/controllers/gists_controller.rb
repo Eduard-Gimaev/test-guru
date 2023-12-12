@@ -11,8 +11,7 @@ class GistsController < ApplicationController
     @gist_question = GistQuestionService.new(@test_passage.current_question).call
 
     if @gist_question.success?
-      create_gist_question
-      flash[:notice] = "#{t('.success')} #{view_context.link_to_created_gist(@result.url)}"
+      flash[:notice] = t('.success')
     else
       flash[:alert] = t('.failure')
     end
@@ -23,11 +22,6 @@ class GistsController < ApplicationController
   end
 
   private
-
-  def create_gist_question
-    current_user.gists.create(question: @test_passage.current_question, url: @gist_question.url).save
-  end
-
   def test_params
     params.permit(:format)
   end
