@@ -7,7 +7,7 @@ class GistsController < ApplicationController
 
     if @gist_question.success?
       create_gist
-      flash[:notice] = t('.success')
+      flash[:notice] = "#{t('.success')} #{view_context.link_to(t('actions.gist_questions'), @gist_question.url)}".html_safe
     else
       flash[:alert] = t('.failure')
     end
