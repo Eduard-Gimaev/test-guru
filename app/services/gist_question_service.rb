@@ -1,9 +1,9 @@
 class GistQuestionService
 
-  def initialize(question, client: nil)
+  def initialize(question, client = client_default)
       @question = question
       @test = @question.test
-      @client = client || client_default
+      @client = client
   end
 
   def call

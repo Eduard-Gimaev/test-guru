@@ -28,9 +28,10 @@ ActiveRecord::Schema.define(version: 2023_12_09_112745) do
   end
 
   create_table "gists", force: :cascade do |t|
+    t.string "question", null: false
+    t.string "url", null: false
     t.integer "question_id", null: false
     t.integer "user_id", null: false
-    t.string "url", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["question_id"], name: "index_gists_on_question_id"
