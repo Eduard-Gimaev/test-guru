@@ -2,15 +2,17 @@ class GistsController < ApplicationController
 
   def create
     @test_passage = TestPassage.find params[:test_passage_id]
-    @gist_question = GistQuestionService.new(@test_passage.current_question).call
+    gist_service = GistQuestionService.new(@test_passage.current_question)
+    @gist_question = service.call
     
-
-    if @gist_question.success?
+    if gist_service.success?
       create_gist
       flash[:notice] = "#{t('.success')} #{view_context.link_to(t('actions.gist_questions'), @gist_question.url)}".html_safe
     else
       flash[:alert] = t('.failure')
     end
+
+    byebug
     redirect_to @test_passage
   end
 

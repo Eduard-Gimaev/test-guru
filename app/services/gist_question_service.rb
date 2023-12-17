@@ -1,11 +1,5 @@
 class GistQuestionService
 
-  Struct.new('Result', :url) do
-    def success?
-      url.present?
-    end
-  end
-
   def initialize(question, client = client_default)
       @question = question
       @test = @question.test
@@ -13,11 +7,14 @@ class GistQuestionService
   end
 
   def call
-    result = @client.create_gist(gist_params)
-    Struct::Result.new result.html_url
+    @client.create_gist(gist_params)
   end
 
-  def destroy_gist(gist)
+  def success?
+    @client.last_response.status == 201
+  end
+
+  def delete_gist(gist)
     gist_id = (URI gist.url).path.split('/')[1]
     @client.delete_gist(gist_id)
   end
