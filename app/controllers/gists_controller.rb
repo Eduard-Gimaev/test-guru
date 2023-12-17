@@ -1,7 +1,7 @@
 class GistsController < ApplicationController
 
   def create
-    @test_passage = TestPassage.find(test_params[:test_passage_id]) 
+    @test_passage = TestPassage.find params[:test_passage_id]
     @gist_question = GistQuestionService.new(@test_passage.current_question).call
     
 
@@ -14,9 +14,6 @@ class GistsController < ApplicationController
     redirect_to @test_passage
   end
 
-  def destroy
-  end
-
   private
 
   def test_params
@@ -24,8 +21,7 @@ class GistsController < ApplicationController
   end
 
   def create_gist
-    # current_user.gists.build(question: @test_passage.current_question, url: @gist_question.url).save
-    current_user.gists.create!(question: @test_passage.current_question, url: @gist_question.url)
+    current_user.gists.create(question: @test_passage.current_question, url: @gist_question.url)
   end
 
 end

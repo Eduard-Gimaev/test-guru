@@ -17,6 +17,11 @@ class GistQuestionService
     Struct::Result.new result.html_url
   end
 
+  def destroy_gist(gist)
+    gist_id = (URI gist.url).path.split('/')[1]
+    @client.delete_gist(gist_id)
+  end
+
   private
 
   def client_default

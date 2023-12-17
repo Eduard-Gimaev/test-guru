@@ -59,6 +59,7 @@ ru:
         question: "Вопрос:"
         url: "Gist url:"
         author: "Автор:"
+        actions: "Действия"
     questions:
       new:
         header: "Создание нового вопроса"
