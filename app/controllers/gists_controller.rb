@@ -3,7 +3,7 @@ class GistsController < ApplicationController
   def create
     @test_passage = TestPassage.find params[:test_passage_id]
     gist_service = GistQuestionService.new(@test_passage.current_question)
-    @gist_question = service.call
+    @gist_question = gist_service.call
     
     if gist_service.success?
       create_gist
@@ -12,7 +12,6 @@ class GistsController < ApplicationController
       flash[:alert] = t('.failure')
     end
 
-    byebug
     redirect_to @test_passage
   end
 

@@ -11,11 +11,11 @@ class GistQuestionService
   end
 
   def success?
-    @client.last_response.status == 201
+    @client.last_response.status.to_i.between?(200, 299)
   end
 
-  def delete_gist(gist)
-    gist_id = (URI gist.url).path.split('/')[1]
+  def delete(gist)
+    gist_id = gist.id.to_s
     @client.delete_gist(gist_id)
   end
 
