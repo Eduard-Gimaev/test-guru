@@ -16,10 +16,6 @@ class GistsController < ApplicationController
 
   private
 
-  def test_params
-    params.permit(:test_passage_id)
-  end
-
   def create_gist
     current_user.gists.create(question: @test_passage.current_question, url: @gist_question.url)
   end
