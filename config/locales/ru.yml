@@ -19,6 +19,7 @@ ru:
     logout: "Выйти"
     back: "Назад"
     next: "Следующий"
+    gist_questions: "Gists_вопросов"
 
   level:
     elementary: "Начинающий"
@@ -39,6 +40,9 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория" 
+#Gist
+  description: "Вопрос о %{test_title} из TestGuru"
+
 #ADMIN
   admin:
     answers:
@@ -50,6 +54,12 @@ ru:
         header: "Детали ответа"
         answer: "Ответ:"
         correct: "Корректно:"
+    gists:
+      index:
+        question: "Вопрос:"
+        url: "Gist url:"
+        author: "Автор:"
+        actions: "Действия"
     questions:
       new:
         header: "Создание нового вопроса"
@@ -89,15 +99,19 @@ ru:
       author: "Test-Guru от Эдуарда Гимаева на github"
       link: "Образовательный проект от онлайн школы Thinknetica"
 #USER
+  gists: 
+    success: "Gist успешно сохранён"
+    failure: "Gist не был сохранён"
   test_passages:
     result:
-      header: "Тест %{title} был успешно завершен!"
-      score: "Дорогой %{user} Ваш результат: "
+      header: "Дорогой %{user}, тест %{title} был успешно завершен!"
+      score: "Ваш результат: "
       success: "Тест пройден."
       fail: "Попробуйте ещё раз."
     show:
       header: "Вы проходите %{title} тест"
       question: "Вопрос № %{current_question} / %{all_questions}"
+    
   tests:
     test:
       question: "Вопрос"
@@ -107,5 +121,3 @@ ru:
   tests_mailer:
     completed_test:
       subject: "Вы закончили TestGuru тест!"
-
-

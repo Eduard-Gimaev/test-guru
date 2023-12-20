@@ -19,6 +19,7 @@ en:
     logout: "Logout"
     back: "Back"
     next: "Next"
+    gist_questions: "Gists_questions"
 
   level:
     elementary: "Elementary"
@@ -39,6 +40,9 @@ en:
         title: "Title"
         level: "Level"
         category_id: "Category" 
+#Gist
+  description: "A question about %{test_title} form TestGuru"
+
 #ADMIN
   admin:
     answers:
@@ -50,6 +54,12 @@ en:
         header: "Answer's details"
         answer: "Answer:"
         correct: "Correct:"
+    gists:
+      index:
+        question: "Question"
+        url: "Gist url"
+        author: "Author"
+        actions: "Actions"
     questions:
       new:
         header: "Creating a new question"
@@ -86,16 +96,18 @@ en:
       author: "Test-Guru by Eduard Gimaev on the github"
       link: "Educational project in an online school Thinknetica"
 #USER
+  gists:
+    success: "Gist has been succesfully saved"
+    failure: "Gist has not been saved"
   test_passages:
     result:
-      header: "Test %{title} has been successfully completed!"
-      score: "Dear %{user} your score: "
+      header: "Dear %{user}, test %{title} has been successfully completed!"
+      score: "Your score: "
       success: "Test passed."
       fail: "Try again."
     show:
       header: "You are passing the %{title} test"
       question: "Question № %{current_question} / %{all_questions}"
-      
   tests:
     test:
       question: "Question"
@@ -105,5 +117,4 @@ en:
   tests_mailer:
     completed_test:
       subject: "You just completed the TestGuru test!"
-
-
+  

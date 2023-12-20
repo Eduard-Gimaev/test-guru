@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_11_07_100213) do
+ActiveRecord::Schema.define(version: 2023_12_09_112745) do
 
   create_table "answers", force: :cascade do |t|
     t.string "body", null: false
@@ -27,6 +27,16 @@ ActiveRecord::Schema.define(version: 2023_11_07_100213) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "gists", force: :cascade do |t|
+    t.string "url", null: false
+    t.integer "question_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["question_id"], name: "index_gists_on_question_id"
+    t.index ["user_id"], name: "index_gists_on_user_id"
+  end
+
   create_table "questions", force: :cascade do |t|
     t.string "body"
     t.integer "test_id", null: false
@@ -34,6 +44,9 @@ ActiveRecord::Schema.define(version: 2023_11_07_100213) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["test_id"], name: "index_questions_on_test_id"
   end
+
+# Could not dump table "sqlite_stat1" because of following StandardError
+#   Unknown type '' for column 'tbl'
 
   create_table "test_passages", force: :cascade do |t|
     t.integer "correct_questions", default: 0
@@ -86,6 +99,8 @@ ActiveRecord::Schema.define(version: 2023_11_07_100213) do
   end
 
   add_foreign_key "answers", "questions"
+  add_foreign_key "gists", "questions"
+  add_foreign_key "gists", "users"
   add_foreign_key "questions", "tests"
   add_foreign_key "test_passages", "questions", column: "current_question_id"
   add_foreign_key "test_passages", "tests"

@@ -17,7 +17,7 @@ class TestPassagesController < ApplicationController
 
   def result
   end
-
+  
   private
 
   def find_test_passage
