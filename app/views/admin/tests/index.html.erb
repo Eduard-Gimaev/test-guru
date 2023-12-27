@@ -1,15 +1,13 @@
 <div class="row justify-content-center">
+    <p>
+      [ <%= link_to t('actions.new_test'), new_admin_test_path %> ]
+      [ <%= link_to t('actions.gist_questions'), admin_gists_path %> ]
+    </p>
   <div class="col col-md-4">
     <table class="table table-hover">
-      <thead class="table-bordered">
-        <tr style="text-align:center">
-          <th colspan="2"><%= link_to t('actions.new_test'), new_admin_test_path %></th>
-          <th colspan="2"><%= link_to t('actions.gist_questions'), admin_gists_path %></th> 
-        </tr>
-        <tr style="text-align:center">
-          <th colspan="4" ><%= t('.header')%></th>
-        </tr>
-      </thead>
+      <tr style="text-align:center">
+        <th colspan="4" ><%= t('.header')%></th>
+      </tr>
       <tr style="text-align:center" >
         <th class="sort-by-title pointer">
           <%= t('.title') %>

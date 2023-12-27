@@ -11,7 +11,7 @@ function sortRowsByTitle(){
   var sortedRows = []
   
   //select all rows except several first ones which is the header
-  for( var i = 3; i < rows.length; i++ ){
+  for( var i = 2; i < rows.length; i++ ){
     sortedRows.push(rows[i])
   }
 
@@ -30,9 +30,8 @@ function sortRowsByTitle(){
 
   // render a sorted table
   var sortedTable = document.createElement('table')
-  sortedTable.classList.add('table')
+  sortedTable.classList.add('table','table-hover')
   var tHeaders = document.createElement('thead')
-  tHeaders.classList.add('table-bordered')
 
   for( i = 0; i < rows.length - sortedRows.length; i++){
     tHeaders.appendChild(rows[i])
