@@ -14,12 +14,23 @@ function sortRowsByTitle(){
   for( var i = 3; i < rows.length; i++ ){
     sortedRows.push(rows[i])
   }
-  sortedRows.sort(compareRows)
+
+  var arrowUp = this.querySelector('.octicon-arrow-up')
+  var arrowDown = this.querySelector('.octicon-arrow-down')
+
+  if (arrowUp.classList.contains('hide')) {
+    sortedRows.sort(compareRowsAsc)
+    arrowUp.classList.remove('hide')
+    arrowDown.classList.add('hide')
+  } else {
+    sortedRows.sort(compareRowsDesc)
+    arrowDown.classList.remove('hide')
+    arrowUp.classList.add('hide')
+  }
 
   // render a sorted table
-  
   var sortedTable = document.createElement('table')
-  sortedTable.classList.add('table', 'table-hover')
+  sortedTable.classList.add('table')
   var tHeaders = document.createElement('thead')
   tHeaders.classList.add('table-bordered')
 
@@ -27,18 +38,25 @@ function sortRowsByTitle(){
     tHeaders.appendChild(rows[i])
   }
   sortedTable.appendChild(tHeaders)
-  
+
   for( i = 0; i < sortedRows.length; i++){
     sortedTable.appendChild(sortedRows[i])
   }
   table.parentNode.replaceChild(sortedTable, table)
 }
 
-function compareRows(row1, row2){
+function compareRowsAsc(row1, row2){
   var testTitle1 = row1.querySelector('td').textContent
   var testTitle2 = row2.querySelector('td').textContent
   if (testTitle1 < testTitle2) {return -1; }
   if (testTitle1 > testTitle2) {return 1; }
   return 0;
+}
 
+function compareRowsDesc(row1, row2){
+  var testTitle1 = row1.querySelector('td').textContent
+  var testTitle2 = row2.querySelector('td').textContent
+  if (testTitle1 < testTitle2) {return 1; }
+  if (testTitle1 > testTitle2) {return -1; }
+  return 0;
 }
