@@ -1,6 +1,6 @@
 document.addEventListener('turbolinks:load', function(){
   var control = document.querySelector('.sort-by-title')
-  control.addEventListener('click', sortRowsByTitle)
+  if (control) {control.addEventListener('click', sortRowsByTitle)}
 })
 
 function sortRowsByTitle(){
@@ -14,20 +14,20 @@ function sortRowsByTitle(){
   for( var i = 3; i < rows.length; i++ ){
     sortedRows.push(rows[i])
   }
-
-  console.log(sortedRows)
-  
   sortedRows.sort(compareRows)
 
   // render a sorted table
   
   var sortedTable = document.createElement('table')
-  sortedTable.classList.add('table')
-  sortedTable.appendChild(rows[0])
+  sortedTable.classList.add('table', 'table-hover')
+  var tHeaders = document.createElement('thead')
+  tHeaders.classList.add('table-bordered')
 
   for( i = 0; i < rows.length - sortedRows.length; i++){
-    sortedTable.appendChild(rows[i])
+    tHeaders.appendChild(rows[i])
   }
+  sortedTable.appendChild(tHeaders)
+  
   for( i = 0; i < sortedRows.length; i++){
     sortedTable.appendChild(sortedRows[i])
   }
