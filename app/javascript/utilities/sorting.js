@@ -1,18 +1,16 @@
 document.addEventListener('turbolinks:load', function(){
   var control = document.querySelector('.sort-by-title')
-
   control.addEventListener('click', sortRowsByTitle)
 })
 
 function sortRowsByTitle(){
   //Nodelist
   //https://developer.mozilla.org/ru/docs/Web/API/NodeList
-
   var table = document.querySelector('table')
   var rows = table.querySelectorAll('tr')
-  var sortedRows = [];
+  var sortedRows = []
   
-  //select all rows except the very first one which is the header
+  //select all rows except several first ones which is the header
   for( var i = 3; i < rows.length; i++ ){
     sortedRows.push(rows[i])
   }
@@ -27,6 +25,9 @@ function sortRowsByTitle(){
   sortedTable.classList.add('table')
   sortedTable.appendChild(rows[0])
 
+  for( i = 0; i < rows.length - sortedRows.length; i++){
+    sortedTable.appendChild(rows[i])
+  }
   for( i = 0; i < sortedRows.length; i++){
     sortedTable.appendChild(sortedRows[i])
   }
