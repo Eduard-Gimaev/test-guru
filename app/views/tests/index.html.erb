@@ -1,8 +1,19 @@
-<table border = "0">
-  <tr><%= t('.header') %>:</tr>
-  <tr>
-    <th><%= t('.title') %></th>
-    <th><%= t('actions.actions') %></th>
-  </tr>
-  <%= render @tests %>
-</table>
+<div class="row justify-content-center">
+  <div class="col col-md-4">
+    <table class="table table-hover">
+        <tr style="text-align:center">
+          <th colspan="2" ><%= t('.header')%></th>
+        </tr>
+      </thead>
+      <tr style="text-align:center" >
+        <th class="sort-by-title pointer">
+          <%= t('.title') %>
+          <%= octicon 'arrow-up', class:'text-success hide' %>
+          <%= octicon 'arrow-down', class:'text-success hide' %>
+        </th>
+        <th><%= t('actions.actions') %></th>
+      </tr>
+      <%= render @tests %>
+    </table>
+  </div>       
+</div>

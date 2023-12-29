@@ -28,7 +28,10 @@
             <p>
               <%= f.label :password_confirmation %><br />
               <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+              <%= octicon 'alert', class: "text-danger hide" %>
+              <%= octicon 'check-circle-fill', class: "text-success hide" %>  
             </p>    
+            
               <br />
               <%= f.submit t('actions.signup'), class: "btn btn-primary" %>
           </div>

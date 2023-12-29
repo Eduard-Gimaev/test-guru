@@ -1,8 +1,8 @@
-<tr>
-    <td><strong><%= test.title %></strong></td>
-    <td rowspan="2" ><%= button_to t('actions.start'), start_test_path(test) %> </td> 
+<tr style="text-align:center">
+    <td> <strong><%= test.title %></strong> </br>
+      <span style="font-size:12px">
+        <%=test_level(test)%> | <%=test.questions.count%>
+      </span>
+    </td>
+    <td  ><%= button_to t('actions.start'), start_test_path(test) %> </td> 
   </tr>
-  <tr>
-    <td style="font-size:12px" > <%=test_level(test)%> | <%= t('.question') %>: <%=test.questions.count%></td> 
-  </tr>
-
