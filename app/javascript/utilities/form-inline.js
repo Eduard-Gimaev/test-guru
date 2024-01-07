@@ -6,7 +6,15 @@ document.addEventListener('turbolinks:load', function() {
         controls[i].addEventListener('click', formInlineLinkHandler)
       }
     }
+
+    var errors = document.querySelector('.resource-errors')
+
+    if (errors) {
+      var resourceId = errors.dataset.resourceId
+      formInlineHandler(resourceId)
+    }
 })
+
 
 function formInlineLinkHandler(event){
     event.preventDefault()
@@ -22,11 +30,11 @@ function formInlineHandler(testId){
     if (formInline.classList.contains('hide')) {
         testTitle.classList.add('hide')
         formInline.classList.remove('hide')
-        link.textContent = 'Cancel'
+        link.value = 'Cancel'
     }else{
         testTitle.classList.remove('hide')
         formInline.classList.add('hide')
-        link.textContent = 'Edit'
+        link.value = 'Edit'
     }
     
 
