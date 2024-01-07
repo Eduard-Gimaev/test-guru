@@ -17,6 +17,7 @@ ru:
     signup: "Зарегистрироваться"
     login: "Войти"
     logout: "Выйти"
+    submit: "Отправить"
     back: "Назад"
     next: "Следующий"
     gist_questions: "Gists_вопросов"
@@ -83,6 +84,8 @@ ru:
         title: "Тест: %{title}"
         level: "Уровень: %{level}"
         quesiton: "Вопрос"
+      form_inline:
+        submit: "OK"
     nav:
       header: "TestGure | АдминКа"
 
