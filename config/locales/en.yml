@@ -17,6 +17,7 @@ en:
     signup: "Signup"
     login: "Login"
     logout: "Logout"
+    submit: "Submit"
     back: "Back"
     next: "Next"
     gist_questions: "Gists_questions"
@@ -83,6 +84,8 @@ en:
         title: "Test: %{title}"
         level: "Level: %{level}"
         quesiton: "Question"
+      form_inline:
+        submit: "OK"
     nav:
       header: "TestGure | AdminKa"
 

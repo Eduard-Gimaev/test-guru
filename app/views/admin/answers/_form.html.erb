@@ -13,7 +13,9 @@
         <%= form.check_box :correct, id: :answer_correct %>
       </p>
 
-      <p><%= form.submit %> | <%= link_to t('actions.back'), admin_question_path(@answer.question) %></p>
+      <p><%= form.submit t('actions.submit'), class: 'btn-primary' %>| 
+         <%= link_to t('actions.back'), admin_question_path(@answer.question) %>
+      </p>
       
     <% end %>
   </div>       
