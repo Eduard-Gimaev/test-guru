@@ -1,6 +1,6 @@
 users = User.create!(
   [
-    { email: 'gimaev@tecnet.ru', password: '123qwe', password_confirmation: '123qwe'}
+    { first_name: 'Ed', last_name: 'G', email: 'gimaev@tecnet.ru', password: '123qwe', password_confirmation: '123qwe'}
   ]
 )
 
