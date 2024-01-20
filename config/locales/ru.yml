@@ -22,6 +22,7 @@ ru:
     next: "Следующий"
     gist_questions: "Gists_вопросов"
     no_questions: "В данном тесте еще нет вопросов"
+    no_answers: "Выберите хотя бы один ответ пожалуйста"
 
   level:
     elementary: "Начинающий"

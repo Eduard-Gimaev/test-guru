@@ -8,6 +8,10 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_find_current_question, on: %i[create show update]
 
+  def answers_chosen(answer_ids)
+    answer_ids.present?
+  end
+
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
     save!
@@ -25,14 +29,15 @@ class TestPassage < ApplicationRecord
     correct_answers_count >= SUCCESS_RATIO
   end
 
-  def has_no_question?
+  def has_no_current_question?
     current_question.nil?
   end
 
   private
 
-  def before_validation_find_current_question
-    self.current_question = next_question
+  def before_validation_find_current_question(answer_ids=0)
+
+    self.current_question = next_question if answers_chosen(answer_ids)
   end
 
   def correct_answers

@@ -22,6 +22,7 @@ en:
     next: "Next"
     gist_questions: "Gists_questions"
     no_questions: "There are no questions in this test yet"
+    no_answers: "Please, choose an answer"
 
   level:
     elementary: "Elementary"
