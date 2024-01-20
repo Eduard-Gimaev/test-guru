@@ -7,7 +7,7 @@ class TestsController < ApplicationController
   end
 
   def start
-    if current_user.test_passage(@test).current_question_id.nil?
+    if @test.questions.count < 1
       flash[:alert] = t('actions.no_questions')
       render :index
     else
@@ -26,10 +26,6 @@ class TestsController < ApplicationController
 
   def find_test
     @test = Test.find(params[:id])
-  end
-
-  def find_test_questions
-    @test.questions?
   end
 
 end
