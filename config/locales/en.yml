@@ -21,6 +21,7 @@ en:
     back: "Back"
     next: "Next"
     gist_questions: "Gists_questions"
+    no_questions: "There are no questions in this test yet"
 
   level:
     elementary: "Elementary"

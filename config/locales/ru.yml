@@ -21,6 +21,7 @@ ru:
     back: "Назад"
     next: "Следующий"
     gist_questions: "Gists_вопросов"
+    no_questions: "В данном тесте еще нет вопросов"
 
   level:
     elementary: "Начинающий"
