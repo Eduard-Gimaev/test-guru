@@ -7,7 +7,7 @@ class TestsController < ApplicationController
   end
 
   def start
-    if @test.questions.count < 1
+    if @test.questions.order(:id).first.nil? && @test.present?
       flash[:alert] = t('actions.no_questions')
       render :index
     else

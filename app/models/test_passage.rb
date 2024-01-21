@@ -35,9 +35,8 @@ class TestPassage < ApplicationRecord
 
   private
 
-  def before_validation_find_current_question(answer_ids=0)
-
-    self.current_question = next_question if answers_chosen(answer_ids)
+  def before_validation_find_current_question
+    self.current_question = next_question
   end
 
   def correct_answers
