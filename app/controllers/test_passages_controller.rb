@@ -6,7 +6,8 @@ class TestPassagesController < ApplicationController
   end
 
   def update
-    byebug
+    # byebug
+    @test_passage.choose_answer(params[:answer_ids])
     @test_passage.accept!(params[:answer_ids])
     if @test_passage.has_no_current_question?
       TestsMailer.completed_test(@test_passage).deliver_now
