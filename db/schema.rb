@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2023_12_09_112745) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "answers", force: :cascade do |t|
     t.string "body", null: false
     t.boolean "correct", default: false
@@ -44,9 +47,6 @@ ActiveRecord::Schema.define(version: 2023_12_09_112745) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["test_id"], name: "index_questions_on_test_id"
   end
-
-# Could not dump table "sqlite_stat1" because of following StandardError
-#   Unknown type '' for column 'tbl'
 
   create_table "test_passages", force: :cascade do |t|
     t.integer "correct_questions", default: 0

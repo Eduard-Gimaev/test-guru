@@ -8,9 +8,9 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_find_current_question, on: %i[create show update]
 
-  def answers_chosen(answer_ids)
-    answer_ids.present?
-  end
+  # def choose_answer(answer_ids)
+  #   self.chosen_answers += 1
+  # end
 
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
@@ -54,8 +54,11 @@ class TestPassage < ApplicationRecord
   def next_question
     if current_question.nil? && test.present?
       test.questions.order(:id).first
+    # elsif params[:answer_ids].nil?
+    #   current_question.id
     else
-      test.questions.order(:id).where('id > ?', current_question.id).first
+      current_question
+      # test.questions.order(:id).where('id > ?', current_question.id).first
     end
   end
 

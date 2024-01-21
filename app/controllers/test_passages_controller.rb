@@ -6,15 +6,13 @@ class TestPassagesController < ApplicationController
   end
 
   def update
-    # byebug
-    @test_passage.answers_chosen(params[:answer_ids])
+    byebug
     @test_passage.accept!(params[:answer_ids])
     if @test_passage.has_no_current_question?
       TestsMailer.completed_test(@test_passage).deliver_now
       redirect_to result_test_passage_path(@test_passage)
-    elsif @test_passage.current_question.present? && @test_passage.answers_chosen(params[:answer_ids]) == false
+    elsif @test_passage.current_question.present? && params[:answer_ids].nil?
       flash[:alert] = t('actions.no_answers')
-
       render :show
     else
       render :show
