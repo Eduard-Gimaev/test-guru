@@ -1,14 +1,12 @@
 class TestPassage < ApplicationRecord
 
   SUCCESS_RATIO = 85
-  # @choosen_answers = nil
 
   belongs_to :user
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :before_validation_find_current_question, on: %i[create show update]
-  # before_update 
 
   def choose_answer(answer_ids)
     @choosen_answers = answer_ids
