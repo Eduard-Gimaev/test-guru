@@ -14,6 +14,7 @@ class TestPassagesController < ApplicationController
     elsif @test_passage.current_question.present? && params[:answer_ids].nil?
       flash[:alert] = t('actions.no_answers')
       render :show
+      flash[:alert] = ""
     else
       render :show
     end
