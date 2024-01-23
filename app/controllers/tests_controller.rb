@@ -1,22 +1,25 @@
 class TestsController < ApplicationController
   before_action :authenticate_user!, only: :start
-  before_action :find_tests, only: %i[index start show destroy]
-  before_action :find_test, only: %i[start show edit update destroy]
+  before_action :find_tests, only: %i[index start destroy]
+  before_action :find_test, only: %i[ start edit update destroy]
   
   def index
+    # byebug
   end
 
   def start
-    if @test.questions.order(:id).first.nil? && @test.present?
-      flash[:alert] = t('actions.no_questions')
-      render :index
-    else
+    # byebug
+    # if @test.questions.order(:id).last.nil?
+    #   flash[:alert] = t('actions.no_questions')
+    #   render :index
+    # else
       current_user.tests.push(@test)
       redirect_to current_user.test_passage(@test)
-    end
+    # end
   end
 
   def show
+    
   end
 
   private
