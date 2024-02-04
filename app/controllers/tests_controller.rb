@@ -4,22 +4,18 @@ class TestsController < ApplicationController
   before_action :find_test, only: %i[ start edit update destroy]
   
   def index
-    # byebug
   end
 
   def start
-    # byebug
-    # if @test.questions.order(:id).last.nil?
-    #   flash[:alert] = t('actions.no_questions')
-    #   render :index
-    # else
-      current_user.tests.push(@test)
-      redirect_to current_user.test_passage(@test)
-    # end
+    current_user.tests.push(@test)
+    redirect_to current_user.test_passage(@test)
   end
 
   def show
-    
+  end
+
+  def feadback
+
   end
 
   private
