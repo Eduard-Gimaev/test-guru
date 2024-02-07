@@ -1,10 +1,10 @@
-<% if test.questions.present?%>
-<tr style="text-align:center">
+<% if test.publish == true %>
+  <tr style="text-align:center">
     <td> <strong><%= test.title %></strong> </br>
       <span style="font-size:12px">
-        <%=test_level(test)%> | <%=test.questions.count%>
+      <%=test_level(test)%> | <%=test.questions.count%>
       </span>
-    </td>
+      </td>
     <td  ><%= button_to t('actions.start'), start_test_path(test) %> </td> 
   </tr>
 <% end %>

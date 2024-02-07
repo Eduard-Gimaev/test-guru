@@ -23,6 +23,5 @@ class Test < ApplicationRecord
   def admin?
     self.type == "Admin"
   end
-
 end
 

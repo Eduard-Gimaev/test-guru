@@ -15,6 +15,11 @@
         <%= form.collection_select :category_id, Category.all, :id, :title, 
         { prompt: true }, class:"form-select form-select-sm", required: true %>
       </p>
+
+      <p>
+        <%= form.label :publish, class: "form-label" %>
+        <%= form.check_box :publish, id: :test_publish %>
+      </p>
       
       <p>
         <%= form.submit t('actions.submit'), class: 'btn-primary' %>

@@ -12,6 +12,7 @@ en:
     new_answer: "New answer"
     show: "Show"
     edit: "Edit"
+    edit_title: "Edit test's title"
     delete: "Delete"
     confirm: "Are you sure?"
     signup: "Signup"
