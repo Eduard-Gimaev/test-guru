@@ -1,0 +1,12 @@
+<h2><%= t('.header') %></h2>
+<table class="table table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th style="text-align:center" ><%= t('.feedback') %></th>
+      <th style="text-align:center" ><%= t('.author') %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @feedbacks %>
+  </tbody>
+</table>

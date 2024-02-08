@@ -59,6 +59,11 @@ ru:
         header: "Детали ответа"
         answer: "Ответ:"
         correct: "Корректно:"
+    feedbacks:
+      index:
+        header: "Обратная связь"
+        feedback: "Сообщение"
+        author: "Автор"
     gists:
       index:
         question: "Вопрос:"
@@ -106,6 +111,9 @@ ru:
       author: "Test-Guru от Эдуарда Гимаева на github"
       link: "Образовательный проект от онлайн школы Thinknetica"
 #USER
+  feedbacks:
+    new:
+      header: "Дорогой %{user}, пожалуйста оставьте обратную связь связь"
   gists: 
     success: "Gist успешно сохранён"
     failure: "Gist не был сохранён"
@@ -118,7 +126,10 @@ ru:
     show:
       header: "Вы проходите %{title} тест"
       question: "Вопрос № %{current_question} / %{all_questions}"
-    
+  questions:
+    show:
+      header: "questions"
+      answer: "answer"  
   tests:
     test:
       question: "Вопрос"
