@@ -98,6 +98,12 @@ en:
     nav:
       header: "TestGure | AdminKa"
 #USER
+  feedback_mailer:
+    send_feedback:
+      header: "Feedback has been sent succesfully"
+      user: "User: "
+      subject: "Subject: "
+      feedback: "Message: "
   feedbacks:
     new:
       header: "Dear %{user}, please leave your feedback here"

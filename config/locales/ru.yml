@@ -105,12 +105,17 @@ ru:
         many: "Обнаружено %{count} ошибок"
         one: "Обнаружено %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
-
     footer:
       header: "Инфо о Test Guru"
       author: "Test-Guru от Эдуарда Гимаева на github"
       link: "Образовательный проект от онлайн школы Thinknetica"
 #USER
+  feedbacks_mailer:
+    sending_feedback:
+      header: "Сообщение обратной связи успешно обтравлено"
+      user: "Пользователь: "
+      subject: "Тема: "
+      feedback: "Сообщение: "
   feedbacks:
     new:
       header: "Дорогой %{user}, пожалуйста оставьте обратную связь связь"
