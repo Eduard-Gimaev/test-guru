@@ -1,5 +1,22 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+    get 'badges/new'
+    get 'badges/index'
+    get 'badges/create'
+    get 'badges/show'
+    get 'badges/edit'
+    get 'badges/update'
+    get 'badges/destroy'
+  end
+  namespace :admin do
+    get 'badges/index'
+    get 'badges/show'
+    get 'badges/update'
+    get 'badges/destroy'
+  end
+  get 'badges/new'
+  get 'badges/index'
   root to: 'tests#index'
 
   devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout},
