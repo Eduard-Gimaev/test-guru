@@ -6,11 +6,16 @@ class TestPassagesController < ApplicationController
   end
 
   def update
+    @test_passage.choose_answer(params[:answer_ids])
     @test_passage.accept!(params[:answer_ids])
-    if @test_passage.completed?
+    if @test_passage.has_no_current_question?
       TestsMailer.completed_test(@test_passage).deliver_now
       redirect_to result_test_passage_path(@test_passage)
-    else 
+    elsif @test_passage.current_question.present? && params[:answer_ids].nil?
+      flash[:alert] = t('actions.no_answers')
+      render :show
+      flash[:alert] = ""
+    else
       render :show
     end
   end
@@ -23,5 +28,5 @@ class TestPassagesController < ApplicationController
   def find_test_passage
     @test_passage = TestPassage.find(params[:id])
   end
-  
+
 end

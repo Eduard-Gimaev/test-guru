@@ -1,7 +1,7 @@
 class TestsController < ApplicationController
   before_action :authenticate_user!, only: :start
-  before_action :find_tests, only: %i[index show destroy]
-  before_action :find_test, only: %i[start show edit update destroy]
+  before_action :find_tests, only: %i[index start destroy]
+  before_action :find_test, only: %i[start edit update destroy]
   
   def index
   end
@@ -12,6 +12,10 @@ class TestsController < ApplicationController
   end
 
   def show
+  end
+
+  def feadback
+
   end
 
   private

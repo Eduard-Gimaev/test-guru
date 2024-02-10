@@ -12,6 +12,7 @@ ru:
     new_answer: "Новый ответ"
     show: "Показать"
     edit: "Изменить"
+    edit_title: "Изменить название теста"
     delete: "Удалить"
     confirm: "Вы уверены?"
     signup: "Зарегистрироваться"
@@ -21,6 +22,9 @@ ru:
     back: "Назад"
     next: "Следующий"
     gist_questions: "Gists_вопросов"
+    feedback: "Обратная связь"
+    no_questions: "В данном тесте еще нет вопросов"
+    no_answers: "Выберите хотя бы один ответ"
 
   level:
     elementary: "Начинающий"
@@ -55,6 +59,11 @@ ru:
         header: "Детали ответа"
         answer: "Ответ:"
         correct: "Корректно:"
+    feedbacks:
+      index:
+        header: "Обратная связь"
+        feedback: "Сообщение"
+        author: "Автор"
     gists:
       index:
         question: "Вопрос:"
@@ -96,12 +105,20 @@ ru:
         many: "Обнаружено %{count} ошибок"
         one: "Обнаружено %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
-
     footer:
       header: "Инфо о Test Guru"
       author: "Test-Guru от Эдуарда Гимаева на github"
       link: "Образовательный проект от онлайн школы Thinknetica"
 #USER
+  feedbacks_mailer:
+    sending_feedback:
+      header: "Сообщение обратной связи успешно обтравлено"
+      user: "Пользователь: "
+      subject: "Тема: "
+      feedback: "Сообщение: "
+  feedbacks:
+    new:
+      header: "Дорогой %{user}, пожалуйста оставьте обратную связь связь"
   gists: 
     success: "Gist успешно сохранён"
     failure: "Gist не был сохранён"
@@ -114,7 +131,10 @@ ru:
     show:
       header: "Вы проходите %{title} тест"
       question: "Вопрос № %{current_question} / %{all_questions}"
-    
+  questions:
+    show:
+      header: "questions"
+      answer: "answer"  
   tests:
     test:
       question: "Вопрос"

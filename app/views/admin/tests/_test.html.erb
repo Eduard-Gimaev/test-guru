@@ -4,16 +4,18 @@
       <%= content_tag :span, test.title, class: 'test-title', data: {test_id: test.id} %>
       <%= render 'form_inline', test: test == @test ? @test : test %>
       </br>
-      <span style="font-size:12px"> <%= test_level(test) %> | <%= test.questions.count %> </span>
-      
+      <span style="font-size:12px"> 
+        <%= test_level(test) %> | 
+        <%= test.questions.count %> | 
+        <%= button_to t('actions.edit_title'),
+            edit_admin_test_path(test),
+            data: {test_id: test.id},
+            class: 'form-inline-link',
+            method: :get %>
+      </span>
     </td>
     <td> <%= button_to t('actions.show'), admin_test_path(test), method: :get %> </td>
-    <td> <%= button_to t('actions.edit'),
-                       edit_admin_test_path(test),
-                       data: {test_id: test.id},
-                       class: 'form-inline-link',
-                       method: :get %> 
-    </td>
+    <td> <%= button_to t('actions.edit'), edit_admin_test_path(test), method: :get %> </td>
     <td> <%= button_to t('actions.delete'), admin_test_path(test), 
                                             method: :delete, 
                                             data: { confirm: 'actions.confirm' } %></td>

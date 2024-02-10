@@ -12,6 +12,7 @@ en:
     new_answer: "New answer"
     show: "Show"
     edit: "Edit"
+    edit_title: "Edit test's title"
     delete: "Delete"
     confirm: "Are you sure?"
     signup: "Signup"
@@ -21,6 +22,9 @@ en:
     back: "Back"
     next: "Next"
     gist_questions: "Gists_questions"
+    feedback: "Feedback"
+    no_questions: "There are no questions in this test yet"
+    no_answers: "Please, choose an answer"
 
   level:
     elementary: "Elementary"
@@ -55,6 +59,11 @@ en:
         header: "Answer's details"
         answer: "Answer:"
         correct: "Correct:"
+    feedbacks:
+      index:
+        header: "Feedbacks"
+        feedback: "Feedback"
+        author: "Author"
     gists:
       index:
         question: "Question"
@@ -88,7 +97,19 @@ en:
         submit: "OK"
     nav:
       header: "TestGure | AdminKa"
-
+#USER
+  feedback_mailer:
+    send_feedback:
+      header: "Feedback has been sent succesfully"
+      user: "User: "
+      subject: "Subject: "
+      feedback: "Message: "
+  feedbacks:
+    new:
+      header: "Dear %{user}, please leave your feedback here"
+  gists:
+    success: "Gist has been succesfully saved"
+    failure: "Gist has not been saved"
   shared:
     errors:
       header:
@@ -98,10 +119,6 @@ en:
       header: "About Test Guru"
       author: "Test-Guru by Eduard Gimaev on the github"
       link: "Educational project in an online school Thinknetica"
-#USER
-  gists:
-    success: "Gist has been succesfully saved"
-    failure: "Gist has not been saved"
   test_passages:
     result:
       header: "Dear %{user}, test %{title} has been successfully completed!"
