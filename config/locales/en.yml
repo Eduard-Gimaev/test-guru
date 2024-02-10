@@ -59,6 +59,17 @@ en:
         header: "Answer's details"
         answer: "Answer:"
         correct: "Correct:"
+    badges:
+      index:
+        new_badge: "New badge"
+        header: "Badges"
+        title: "Title"
+      show:
+        header: "Badge details"
+        title: "Title: "
+        picture: "Picture: "
+        rule: "Rule: "
+        rule_value: "Rule value: "
     feedbacks:
       index:
         header: "Feedbacks"

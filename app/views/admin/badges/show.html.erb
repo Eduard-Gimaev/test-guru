@@ -1,2 +1,7 @@
-<h1>Admin::Badges#show</h1>
-<p>Find me in app/views/admin/badges/show.html.erb</p>
+<h3><%= t('.header') %></h3>
+<p><b><%= t('.title') %></b> <%= @badge.title %></p>
+<p><b><%= t('.picture') %></b> <%= @badge.picture %></p>
+<p><b><%= t('.rule') %></b> <%= @badge.rule %></p>
+<p><b><%= t('.rule_value') %></b> <%= @badge.rule_value %></p>
+
+<%= link_to t('actions.back'), admin_badges_path %>

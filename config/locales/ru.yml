@@ -59,6 +59,17 @@ ru:
         header: "Детали ответа"
         answer: "Ответ:"
         correct: "Корректно:"
+    badges:
+      index:
+        new_badge: "Создать бейдж"
+        header: "Бейджи"
+        title: "Наименование"
+      show:
+        header: "Детали бейджа"
+        title: "Наименование: "
+        picture: "Картинка: "
+        rule: "Правило: "
+        rule_value: "Ценность правила: "
     feedbacks:
       index:
         header: "Обратная связь"
