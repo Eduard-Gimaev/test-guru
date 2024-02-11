@@ -9,6 +9,8 @@ class TestPassagesController < ApplicationController
     @test_passage.choose_answer(params[:answer_ids])
     @test_passage.accept!(params[:answer_ids])
     if @test_passage.has_no_current_question?
+      @test_passage.update(succeded: true) if @test_passage.success?
+      # adding the award assigning here to the user
       TestsMailer.completed_test(@test_passage).deliver_now
       redirect_to result_test_passage_path(@test_passage)
     elsif @test_passage.current_question.present? && params[:answer_ids].nil?

@@ -28,7 +28,6 @@ ActiveRecord::Schema.define(version: 2024_02_10_072249) do
     t.string "title", null: false
     t.string "picture", null: false
     t.string "rule", null: false
-    t.string "rule_value", null: false
     t.bigint "author_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
