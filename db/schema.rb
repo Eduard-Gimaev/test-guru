@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2024_02_10_072249) do
     t.string "title", null: false
     t.string "picture", null: false
     t.string "rule", null: false
+    t.string "rule_params", null: false
     t.bigint "author_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -74,7 +75,7 @@ ActiveRecord::Schema.define(version: 2024_02_10_072249) do
     t.integer "current_question_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "succeded", default: false
+    t.boolean "success", default: false
     t.index ["current_question_id"], name: "index_test_passages_on_current_question_id"
     t.index ["test_id"], name: "index_test_passages_on_test_id"
     t.index ["user_id"], name: "index_test_passages_on_user_id"

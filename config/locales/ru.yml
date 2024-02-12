@@ -69,6 +69,7 @@ ru:
         title: "Наименование: "
         picture: "Картинка: "
         rule: "Правило: "
+        rule_params: "Правило параметр: "
     feedbacks:
       index:
         header: "Обратная связь"

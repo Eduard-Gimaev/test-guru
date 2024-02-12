@@ -69,6 +69,7 @@ en:
         title: "Title: "
         picture: "Picture: "
         rule: "Rule: "
+        rule_params: "Rule params: "
     feedbacks:
       index:
         header: "Feedbacks"

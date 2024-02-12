@@ -15,7 +15,12 @@
             <%= form.text_area :rule, class: 'form-control form-control-sm', required: true, 
             placeholder: "Please, type a rule here" %>
         </p>
-        
+        <p> 
+            <%= form.label :rule_params, class: "form-label"  %>      
+            <%= form.text_area :rule_params, class: 'form-control form-control-sm', required: true, 
+            placeholder: "Please, type a rule params here" %>
+        </p>
+
         <p>
         
             <%= form.submit t('actions.submit'), class: 'btn-primary' %>
