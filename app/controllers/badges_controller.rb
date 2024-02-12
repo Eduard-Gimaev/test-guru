@@ -1,8 +1,5 @@
 class BadgesController < ApplicationController
-
   def index
-  end
-
-  def show
+    @badges = Badge.all.order(created_at: :desc)
   end
 end

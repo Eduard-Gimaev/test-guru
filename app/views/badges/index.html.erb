@@ -1,2 +1,18 @@
-<h1>Badges#index</h1>
-<p>Find me in app/views/badges/index.html.erb</p>
+<div class="row justify-content-center">
+    <p>
+      <%= link_to t('actions.back'), tests_path %>
+    </p>
+
+  <div class="col col-md-8">
+    <table class="table table-hover">
+      <tr style="text-align:center">
+        <th colspan="2" ><%= t('.header')%></th>
+      </tr>
+      <tr style="text-align:center" >
+        <th><%= t('.picture') %></th>
+        <th><%= t('.badge') %></th>
+      </tr>
+      <%= render @badges %>
+    </table>
+  </div>       
+</div>

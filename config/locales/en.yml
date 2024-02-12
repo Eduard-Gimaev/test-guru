@@ -22,7 +22,9 @@ en:
     back: "Back"
     next: "Next"
     gist_questions: "Gists_questions"
+    badges: "Badges"
     feedback: "Feedback"
+    user_badges: "User's badges"
     no_questions: "There are no questions in this test yet"
     no_answers: "Please, choose an answer"
 
@@ -67,7 +69,7 @@ en:
       show:
         header: "Badge details"
         title: "Title: "
-        picture: "Picture: "
+        picture: "Badge: "
         rule: "Rule: "
         rule_params: "Rule params: "
     feedbacks:
@@ -106,9 +108,26 @@ en:
         quesiton: "Question"
       form_inline:
         submit: "OK"
+    user_badges:
+      index:
+        header: "User badges"
+        user: "User"
+        picture: "Badge"
+        badge: "Badge description"
     nav:
       header: "TestGure | AdminKa"
 #USER
+  badges:
+      index:
+        header: "Badges available"
+        picture: "Badge"
+        badge: "Badge description"
+      show:
+        header: "Badge details"
+        title: "Title: "
+        picture: "Badge: "
+        rule: "Rule: "
+        rule_params: "Rule params: "
   feedback_mailer:
     send_feedback:
       header: "Feedback has been sent succesfully"
@@ -143,9 +162,15 @@ en:
     test:
       question: "Question"
     index:
+      user_badges: "%{user} has badges"
       header: "Tricky Tests"
       title: "Title"
   tests_mailer:
     completed_test:
       subject: "You just completed the TestGuru test!"
+  user_badges:
+      index:
+        header: "My badges"
+        picture: "Badge"
+        badge: "Badge description"
   

@@ -6,7 +6,8 @@ Rails.application.routes.draw do
                                :controllers => {sessions: 'sessions'}
 
   resources :users do
-    get :badges, on: :member
+    resources :badges, only: %i[index show]
+    resources :user_badges, only: %i[index]
   end
 
   resources :tests, only: %i[index] do
