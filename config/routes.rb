@@ -36,6 +36,7 @@ Rails.application.routes.draw do
     resources :gists, only: %i[index destroy]
     resources :feedbacks, only: %i[index]
     resources :badges
+    resources :user_badges, only: %i[index]
   end
 
   
