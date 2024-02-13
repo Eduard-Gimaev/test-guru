@@ -1,0 +1,32 @@
+<div class="row justify-content-center">
+  <div class="col col-md-4">
+    <%= form_with model: [:admin, @badge], local: true do |form| %>
+
+        <p>
+            <%= form.label :title, class: "form-label"  %>  
+            <%= form.text_field :title, class: 'form-control form-control-sm', required: true %>
+        </p>
+        <p> 
+            <%= form.label :picture, class: "form-label"  %>      
+            <%= form.text_field :picture, class: 'form-control form-control-sm', required: true %>
+        </p>
+        <p> 
+            <%= form.label :rule, class: "form-label"  %>      
+            <%= form.text_area :rule, class: 'form-control form-control-sm', required: true, 
+            placeholder: "Please, type a rule here" %>
+        </p>
+        <p> 
+            <%= form.label :rule_params, class: "form-label"  %>      
+            <%= form.text_area :rule_params, class: 'form-control form-control-sm', required: true, 
+            placeholder: "Please, type a rule params here" %>
+        </p>
+
+        <p>
+        
+            <%= form.submit t('actions.submit'), class: 'btn-primary' %>
+            <%= link_to t('action.back'), admin_badges_path %>
+        </p>
+    <% end %>
+  </div>       
+</div> 
+
