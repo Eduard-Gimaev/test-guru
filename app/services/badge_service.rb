@@ -11,7 +11,6 @@ class BadgeService
     Badge.all.map do |badge|
         @user.badges << badge if send(badge.rule, badge.rule_params)
     end
-    # byebug
   end
 
   private
