@@ -23,8 +23,6 @@ ru:
     next: "Следующий"
     gist_questions: "Gists_вопросов"
     feedback: "Обратная связь"
-    user_badges: "Бейджи пользователей"
-    badges: "Бейджи"
     no_questions: "В данном тесте еще нет вопросов"
     no_answers: "Выберите хотя бы один ответ"
 
@@ -61,17 +59,6 @@ ru:
         header: "Детали ответа"
         answer: "Ответ:"
         correct: "Корректно:"
-    badges:
-      index:
-        new_badge: "Создать бейдж"
-        header: "Бейджи"
-        title: "Наименование"
-      show:
-        header: "Детали бейджа"
-        title: "Наименование: "
-        picture: "Бейдж: "
-        rule: "Правило: "
-        rule_params: "Правило параметр: "
     feedbacks:
       index:
         header: "Обратная связь"
@@ -108,12 +95,6 @@ ru:
         quesiton: "Вопрос"
       form_inline:
         submit: "OK"
-    user_badges:
-      index:
-        header: "Бейджи пользователей"
-        user: "Пользователь"
-        picture: "Бейдж"
-        badge: "Описание бейджа"
     nav:
       header: "TestGure | АдминКа"
 
@@ -129,17 +110,6 @@ ru:
       author: "Test-Guru от Эдуарда Гимаева на github"
       link: "Образовательный проект от онлайн школы Thinknetica"
 #USER
-  badges:
-      index:
-        header: "Доступные бейджи"
-        picture: "Бейдж"
-        badge: "Описание бейджа"
-      show:
-        header: "Детали бейджа"
-        title: "Наименование: "
-        picture: "Бейдж: "
-        rule: "Правило: "
-        rule_params: "Правило параметр: "
   feedbacks_mailer:
     sending_feedback:
       header: "Сообщение обратной связи успешно обтравлено"
@@ -169,14 +139,8 @@ ru:
     test:
       question: "Вопрос"
     index:
-      user_badges: "%{user} - бейджи"
       header: "Доступные тесты"
       title: "Название"
   tests_mailer:
     completed_test:
       subject: "Вы закончили TestGuru тест!"
-  user_badges:
-      index:
-        header: "Мои бейджи"
-        picture: "Бейдж"
-        badge: "Описание бейджа"
