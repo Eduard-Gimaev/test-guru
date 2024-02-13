@@ -17,6 +17,11 @@
       </p>
 
       <p>
+        <%= form.label :timer, class: "form-label", id: :test_timer %>        
+        <%= form.number_field :timer, class: 'form-control form-control-sm', required: true%>
+      </p>
+
+      <p>
         <%= form.label :publish, class: "form-label" %>
         <%= form.check_box :publish, id: :test_publish %>
       </p>
