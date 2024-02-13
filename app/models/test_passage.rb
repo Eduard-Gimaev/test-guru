@@ -8,8 +8,6 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_find_current_question, on: %i[create show update]
 
-  scope :success, -> { where(success: true) }
-
   def choose_answer(answer_ids)
     @choosen_answers = answer_ids
   end

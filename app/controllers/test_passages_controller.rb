@@ -8,17 +8,7 @@ class TestPassagesController < ApplicationController
   def update
     @test_passage.choose_answer(params[:answer_ids])
     @test_passage.accept!(params[:answer_ids])
-    test_result
-  end
-
-  def result
-  end
-  
-  private
-
-  def test_result
     if @test_passage.has_no_current_question?
-      assign_success_badge
       TestsMailer.completed_test(@test_passage).deliver_now
       redirect_to result_test_passage_path(@test_passage)
     elsif @test_passage.current_question.present? && params[:answer_ids].nil?
@@ -30,12 +20,10 @@ class TestPassagesController < ApplicationController
     end
   end
 
-  def assign_success_badge
-    if @test_passage.success?
-        @test_passage.update(success: true) 
-        BadgeService.new(@test_passage).assign_badge
-    end
+  def result
   end
+  
+  private
 
   def find_test_passage
     @test_passage = TestPassage.find(params[:id])
