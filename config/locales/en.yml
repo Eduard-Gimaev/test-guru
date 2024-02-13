@@ -162,7 +162,7 @@ en:
     test:
       question: "Question"
     index:
-      user_badges: "%{user} has badges"
+      user_badges: "%{user} - badges"
       header: "Tricky Tests"
       title: "Title"
   tests_mailer:
