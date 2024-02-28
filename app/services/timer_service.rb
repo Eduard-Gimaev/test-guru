@@ -6,12 +6,17 @@ class TimerService
     @test = @test_passage.test
   end
 
-  def test_time_allotted
-    @test_passage.created_at + @test.timer.minutes
+  def time_end
+    @test_passage.created_at + @test.timer
   end
+
+  def time_left
+    (time_end - Time.current).to_f
+  end
+
   
-  def test_time_over?
-    @test.timer?&&test_time_allotted.past?
+  def time_over?
+    @test.timer?&&time_end.past?
   end
 
 end
