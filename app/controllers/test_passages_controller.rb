@@ -17,7 +17,7 @@ class TestPassagesController < ApplicationController
   private
 
   def test_result
-    if (@test_passage.has_no_current_question? && !TimerService.new(@test_passage).time_over?) || TimerService.new(@test_passage).time_over?
+    if (@test_passage.has_no_current_question? || TimerService.new(@test_passage).time_over?
       assign_success_badge
       TestsMailer.completed_test(@test_passage).deliver_now
       redirect_to result_test_passage_path(@test_passage)
