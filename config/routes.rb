@@ -39,7 +39,4 @@ Rails.application.routes.draw do
     resources :badges
     resources :user_badges, only: %i[index]
   end
-
-  
-
 end
