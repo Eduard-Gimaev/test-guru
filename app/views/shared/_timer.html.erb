@@ -1,4 +1,4 @@
 
       <%= content_tag :div, '', 
         class: "timer", 
-        data: {time: TimerService.new(@test_passage).time_end } %>
+        data: {time: TimerService.new.time_end(@test_passage) } %>
