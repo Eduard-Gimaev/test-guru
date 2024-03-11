@@ -1,5 +1,5 @@
 class BadgeService
-    include TestsHelper
+  include TestsHelper
 
   def initialize(test_passage)
     @test_passage = test_passage
